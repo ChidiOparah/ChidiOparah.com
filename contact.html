@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Chidi Oparah — Fractional CTO | Rvelate</title>
+  <meta name="description" content="Get in touch with Chidi Oparah, Fractional CTO at Rvelate. Book a free discovery call or connect on LinkedIn." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:    #0a0a0a;
+      --white:    #ffffff;
+      --gray-50:  #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-400: #9ca3af;
+      --gray-600: #4b5563;
+      --gray-800: #1f2937;
+      --accent:   #2563eb;
+      --accent-light: #3b82f6;
+      --accent-faint: #eff6ff;
+      --gradient: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #0f172a 100%);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--black);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      height: 68px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200);
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+    .nav-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--black);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-600);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--black); }
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .nav-cta:hover { background: var(--accent-light) !important; transform: translateY(-1px); }
+    .nav-active { color: var(--accent) !important; font-weight: 600 !important; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: var(--gradient);
+      padding: 140px 5% 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 70%);
+      top: -100px; right: 0;
+      pointer-events: none;
+    }
+    .page-hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: rgba(255,255,255,0.8); }
+    .breadcrumb-sep { font-size: 0.7rem; }
+
+    .page-hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.4rem, 4vw, 3.5rem);
+      font-weight: 700;
+      color: white;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .page-hero h1 span { color: #60a5fa; }
+    .page-hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.6);
+      max-width: 500px;
+      line-height: 1.7;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .contact-body {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 5%;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    /* ── FORM ── */
+    .form-section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .form-section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.75px;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+    .form-section-sub {
+      font-size: 0.95rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+
+    .field { display: flex; flex-direction: column; gap: 0.4rem; }
+    .field label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gray-800);
+      letter-spacing: 0.01em;
+    }
+    .field input,
+    .field select,
+    .field textarea {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--black);
+      background: var(--gray-50);
+      border: 1.5px solid var(--gray-200);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+      width: 100%;
+      appearance: none;
+    }
+    .field input::placeholder,
+    .field textarea::placeholder { color: var(--gray-400); }
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--accent);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+    }
+    .field textarea { resize: vertical; min-height: 140px; }
+    .field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239ca3af' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; cursor: pointer; }
+
+    .form-submit {
+      background: var(--accent);
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.9rem 2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(37,99,235,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .form-submit:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37,99,235,0.45);
+    }
+    .form-submit svg { transition: transform 0.2s; }
+    .form-submit:hover svg { transform: translateX(3px); }
+
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--gray-400);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: -0.25rem;
+    }
+
+    /* success state */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 3rem 2rem;
+      background: var(--accent-faint);
+      border: 1.5px solid rgba(37,99,235,0.2);
+      border-radius: 16px;
+    }
+    .success-icon {
+      width: 64px; height: 64px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+    }
+    .form-success h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .form-success p { font-size: 0.95rem; color: var(--gray-600); }
+
+    /* ── SIDEBAR ── */
+    .contact-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 1.25rem; }
+
+    .contact-card {
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 1.75rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .contact-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      border-color: var(--accent);
+    }
+    .contact-card-icon {
+      flex-shrink: 0;
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon-linkedin { background: #0a66c2; }
+    .icon-email   { background: var(--accent-faint); border: 1.5px solid rgba(37,99,235,0.2); }
+    .icon-web     { background: var(--gray-100); border: 1.5px solid var(--gray-200); }
+
+    .contact-card-body {}
+    .contact-card-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 0.25rem;
+    }
+    .contact-card-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--black);
+      margin-bottom: 0.25rem;
+    }
+    .contact-card-desc { font-size: 0.82rem; color: var(--gray-600); line-height: 1.5; }
+
+    /* linkedin featured */
+    .card-linkedin-featured {
+      background: var(--gradient);
+      border-color: transparent;
+      flex-direction: column;
+    }
+    .card-linkedin-featured .contact-card-label { color: rgba(255,255,255,0.5); }
+    .card-linkedin-featured .contact-card-value { color: white; font-size: 1.1rem; }
+    .card-linkedin-featured .contact-card-desc { color: rgba(255,255,255,0.6); }
+    .linkedin-profile-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .linkedin-avatar {
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+    .linkedin-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: white;
+      margin-bottom: 0.2rem;
+    }
+    .linkedin-title { font-size: 0.82rem; color: rgba(255,255,255,0.6); }
+    .linkedin-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+      width: 100%;
+      justify-content: center;
+    }
+    .linkedin-btn:hover { background: rgba(255,255,255,0.2); }
+
+    .availability-card {
+      background: var(--accent-faint);
+      border: 1.5px solid rgba(37,99,235,0.2);
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .availability-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.75rem;
+    }
+    .avail-dot {
+      width: 8px; height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.4); }
+    }
+    .avail-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--black);
+    }
+    .avail-desc { font-size: 0.82rem; color: var(--gray-600); line-height: 1.6; }
+
+    /* ── FOOTER ── */
+    footer { background: #0a0a0a; padding: 3rem 5%; }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--white); text-decoration: none; }
+    .footer-logo span { color: var(--accent-light); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: white; }
+    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.25); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .contact-body { grid-template-columns: 1fr; gap: 3rem; }
+      .contact-sidebar { position: static; }
+    }
+    @media (max-width: 600px) {
+      nav .nav-links { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Rvelate<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#process">Process</a></li>
+      <li><a href="index.html#why">Why Chidi</a></li>
+      <li><a href="contact.html" class="nav-cta nav-active">Work Together</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Contact</span>
+      </div>
+      <h1>Let's Build<br /><span>Something Great</span></h1>
+      <p>Tell Chidi about your company and what you're trying to achieve. He'll get back to you within 24 hours.</p>
+    </div>
+  </div>
+
+  <!-- CONTACT BODY -->
+  <div style="background: var(--white);">
+    <div class="contact-body">
+
+      <!-- FORM -->
+      <div>
+        <div class="form-section-label">Send a Message</div>
+        <h2 class="form-section-title">Start the Conversation</h2>
+        <p class="form-section-sub">Fill in a few details and Chidi will follow up personally — no sales team, no automated sequences.</p>
+
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Sarah" required />
+            </div>
+            <div class="field">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Johnson" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" name="email" placeholder="sarah@yourcompany.com" required />
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Acme Corp" />
+            </div>
+            <div class="field">
+              <label for="stage">Company Stage</label>
+              <select id="stage" name="stage">
+                <option value="" disabled selected>Select stage</option>
+                <option>Pre-seed / Idea</option>
+                <option>Seed</option>
+                <option>Series A</option>
+                <option>Series B+</option>
+                <option>Growth / Scale</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="topic">How Can Chidi Help?</label>
+            <select id="topic" name="topic">
+              <option value="" disabled selected>Select a topic</option>
+              <option>Fractional CTO Engagement</option>
+              <option>Technology Strategy</option>
+              <option>Technical Due Diligence</option>
+              <option>Team Building & Engineering Leadership</option>
+              <option>AI / Product Integration</option>
+              <option>Fundraise Readiness</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Tell Chidi About Your Situation</label>
+            <textarea id="message" name="message" placeholder="Briefly describe your company, the challenge you're facing, and what success looks like for you..." required></textarea>
+          </div>
+
+          <div>
+            <button type="submit" class="form-submit">
+              Send Message
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <p class="form-note" style="margin-top:0.85rem;">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1a5 5 0 100 10A5 5 0 006 1zm0 4v2.5" stroke="#9ca3af" stroke-width="1.3" stroke-linecap="round"/><circle cx="6" cy="9" r="0.5" fill="#9ca3af"/></svg>
+              Your information is never shared. Chidi responds personally within 24 hours.
+            </p>
+          </div>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M6 14l5 5 11-10" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Message Sent!</h3>
+          <p>Thanks for reaching out. Chidi will reply to <strong id="successEmail"></strong> within 24 hours.</p>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="contact-sidebar">
+
+        <!-- LinkedIn featured card -->
+        <div class="contact-card card-linkedin-featured" id="linkedin">
+          <div class="linkedin-profile-row">
+            <div class="linkedin-avatar">CO</div>
+            <div>
+              <div class="linkedin-name">Chidi Oparah</div>
+              <div class="linkedin-title">Fractional CTO · Rvelate.com</div>
+            </div>
+          </div>
+          <div class="contact-card-label">LinkedIn</div>
+          <div class="contact-card-value">linkedin.com/in/chidioparah</div>
+          <div class="contact-card-desc" style="margin-bottom:1.25rem;">Connect for thought leadership on engineering, startups, and technology strategy.</div>
+          <a href="https://linkedin.com/in/chidioparah" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <rect x="1" y="1" width="14" height="14" rx="2" fill="#0a66c2"/>
+              <path d="M4 6.5V12M4 4.5v.01M7.5 12V9c0-1.1.9-2 2-2s2 .9 2 2v3M7.5 6.5V12" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            View LinkedIn Profile
+          </a>
+        </div>
+
+        <!-- Email -->
+        <a href="mailto:Chidi@rvelate.com" class="contact-card">
+          <div class="contact-card-icon icon-email">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M3 5h16l-8 7-8-7z" fill="#2563eb" opacity="0.2"/>
+              <path d="M3 5h16v12H3V5zm0 0l8 7 8-7" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="contact-card-body">
+            <div class="contact-card-label">Email</div>
+            <div class="contact-card-value">Chidi@rvelate.com</div>
+            <div class="contact-card-desc">Direct line. Chidi reads every email personally.</div>
+          </div>
+        </a>
+
+        <!-- Website -->
+        <a href="https://rvelate.com" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-card-icon icon-web">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <circle cx="11" cy="11" r="8" stroke="#6b7280" stroke-width="1.5"/>
+              <path d="M11 3c-2 2-3 5-3 8s1 6 3 8M11 3c2 2 3 5 3 8s-1 6-3 8M3 11h16" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="contact-card-body">
+            <div class="contact-card-label">Website</div>
+            <div class="contact-card-value">rvelate.com</div>
+            <div class="contact-card-desc">Learn more about Rvelate's services and approach.</div>
+          </div>
+        </a>
+
+        <!-- Availability -->
+        <div class="availability-card">
+          <div class="availability-header">
+            <div class="avail-dot"></div>
+            <div class="avail-title">Currently Accepting Clients</div>
+          </div>
+          <p class="avail-desc">Chidi has limited fractional CTO slots available. Engagements typically run 3–12 months with flexible time commitments to match your needs.</p>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo">Rvelate<span>.</span></a>
+      <ul class="footer-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="footer-copy">© 2026 Rvelate. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('contactForm');
+      const success = document.getElementById('formSuccess');
+      const emailVal = document.getElementById('email').value;
+      document.getElementById('successEmail').textContent = emailVal;
+      form.style.display = 'none';
+      success.style.display = 'block';
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    if (window.location.hash === '#linkedin') {
+      setTimeout(() => {
+        document.getElementById('linkedin')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chidi Oparah — Fractional CTO | Rvelate</title>
+  <meta name="description" content="Chidi Oparah is a Fractional CTO at Rvelate, helping startups and growth-stage companies build scalable technology strategies without the full-time cost." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:    #0a0a0a;
+      --white:    #ffffff;
+      --gray-50:  #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-400: #9ca3af;
+      --gray-600: #4b5563;
+      --gray-800: #1f2937;
+      --accent:   #2563eb;
+      --accent-light: #3b82f6;
+      --accent-faint: #eff6ff;
+      --gradient: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #0f172a 100%);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--black);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      height: 68px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200);
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+
+    .nav-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--black);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-600);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--black); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .nav-cta:hover { background: var(--accent-light) !important; transform: translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      padding: 120px 5% 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(37,99,235,0.25) 0%, transparent 70%);
+      top: -100px; right: -100px;
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%);
+      bottom: 0; left: 10%;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(37,99,235,0.2);
+      border: 1px solid rgba(37,99,235,0.4);
+      color: #93c5fd;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: #60a5fa;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.4); }
+    }
+
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--white);
+      letter-spacing: -1.5px;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 .accent { color: #60a5fa; }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      padding: 0.875rem 2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(37,99,235,0.45);
+    }
+    .btn-primary:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(37,99,235,0.55);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: rgba(255,255,255,0.8);
+      padding: 0.875rem 2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.5);
+      transform: translateY(-2px);
+    }
+
+    /* hero card */
+    .hero-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 2rem;
+      backdrop-filter: blur(16px);
+    }
+    .hero-avatar {
+      width: 88px; height: 88px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 auto 1.25rem;
+    }
+    .hero-card-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 0.25rem;
+    }
+    .hero-card-title {
+      font-size: 0.85rem;
+      color: #93c5fd;
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .stat {
+      background: rgba(255,255,255,0.05);
+      padding: 1rem;
+      text-align: center;
+    }
+    .stat-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: white;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .stat-label {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+    }
+    .hero-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .tag {
+      background: rgba(37,99,235,0.25);
+      border: 1px solid rgba(37,99,235,0.4);
+      color: #93c5fd;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+    }
+
+    /* ── LOGOS STRIP ── */
+    .logos-strip {
+      background: var(--gray-50);
+      padding: 2.5rem 5%;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .logos-label {
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 1.5rem;
+    }
+    .logos-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .logo-item {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--gray-400);
+      letter-spacing: -0.5px;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+    .logo-item:hover { opacity: 1; }
+
+    /* ── SECTIONS ── */
+    section { padding: 100px 5%; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--gray-600);
+      max-width: 580px;
+      line-height: 1.75;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--white); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-text p {
+      color: var(--gray-600);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .about-checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+    }
+    .about-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--gray-800);
+      font-weight: 500;
+    }
+    .check-icon {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      background: var(--accent-faint);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .check-icon svg { color: var(--accent); }
+
+    .about-visual {
+      background: var(--gradient);
+      border-radius: 24px;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(37,99,235,0.3), transparent 60%);
+    }
+    .about-quote {
+      position: relative;
+      z-index: 1;
+    }
+    .quote-mark {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 5rem;
+      line-height: 0.8;
+      color: rgba(37,99,235,0.5);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .quote-text {
+      font-size: 1.2rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.9);
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+    .quote-author {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      font-weight: 500;
+    }
+
+    /* ── SERVICES ── */
+    #services { background: var(--gray-50); }
+    .services-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: end;
+      margin-bottom: 4rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+      border-color: var(--gray-200);
+    }
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      width: 52px; height: 52px;
+      background: var(--accent-faint);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.5rem;
+    }
+    .service-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--black);
+    }
+    .service-desc {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      line-height: 1.75;
+    }
+
+    /* ── HOW IT WORKS ── */
+    #process { background: var(--white); }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+      position: relative;
+    }
+    .process-grid::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: calc(12.5% + 28px);
+      right: calc(12.5% + 28px);
+      height: 2px;
+      background: var(--gray-200);
+      z-index: 0;
+    }
+    .process-step {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .step-circle {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--accent);
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .process-step:hover .step-circle {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+    .step-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--black);
+    }
+    .step-desc {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      line-height: 1.65;
+    }
+
+    /* ── WHY CHIDI ── */
+    #why { background: var(--gray-50); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-top: 3rem;
+    }
+    .why-item {
+      display: flex;
+      gap: 1.25rem;
+      padding: 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 14px;
+      transition: box-shadow 0.2s;
+      margin-bottom: 1.25rem;
+    }
+    .why-item:last-child { margin-bottom: 0; }
+    .why-item:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
+    .why-icon {
+      flex-shrink: 0;
+      width: 44px; height: 44px;
+      background: var(--accent-faint);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+    .why-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: var(--black);
+    }
+    .why-desc {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      line-height: 1.65;
+    }
+    .why-aside {
+      background: var(--gradient);
+      border-radius: 20px;
+      padding: 2.5rem;
+      color: white;
+      position: sticky;
+      top: 90px;
+    }
+    .aside-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+    .aside-sub {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 2rem;
+    }
+    .aside-metric {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .aside-metric:last-of-type { border-bottom: none; }
+    .metric-label { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+    .metric-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #60a5fa;
+    }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: var(--white); }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .testi-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .stars {
+      color: #f59e0b;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+    .testi-text {
+      font-size: 0.95rem;
+      color: var(--gray-800);
+      line-height: 1.75;
+      flex: 1;
+      margin-bottom: 1.5rem;
+    }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .testi-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: white;
+      flex-shrink: 0;
+    }
+    .testi-name { font-weight: 600; font-size: 0.9rem; color: var(--black); }
+    .testi-role { font-size: 0.78rem; color: var(--gray-400); margin-top: 1px; }
+
+    /* ── CTA ── */
+    #contact {
+      background: var(--gradient);
+      padding: 100px 5%;
+    }
+    .cta-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cta-inner .section-label { color: #93c5fd; }
+    .cta-inner .section-title { color: white; }
+    .cta-inner p { color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; font-size: 1.05rem; line-height: 1.75; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-detail {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.45);
+    }
+    .cta-detail span { width: 4px; height: 4px; background: rgba(255,255,255,0.3); border-radius: 50%; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0a0a0a;
+      padding: 3rem 5%;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .footer-logo span { color: var(--accent-light); }
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: white; }
+    .footer-copy {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.25);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-card { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .services-header { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .process-grid::before { display: none; }
+      .why-grid { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      nav .nav-links { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">Rvelate<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#why">Why Chidi</a></li>
+      <li><a href="#contact" class="nav-cta">Work Together</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">Fractional CTO · Available Now</div>
+        <h1>
+          Technology<br />
+          Leadership<br />
+          <span class="accent">On Demand.</span>
+        </h1>
+        <p class="hero-sub">
+          Chidi Oparah brings senior engineering leadership to startups and growth-stage companies — without the overhead of a full-time executive hire.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Start the Conversation</a>
+          <a href="#services" class="btn-ghost">Explore Services</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-avatar">CO</div>
+        <div class="hero-card-name">Chidi Oparah</div>
+        <div class="hero-card-title">Fractional CTO · Rvelate.com</div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number">12+</div>
+            <div class="stat-label">Years Exp.</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">30+</div>
+            <div class="stat-label">Startups Served</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">$50M+</div>
+            <div class="stat-label">Capital Raised</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Successful Exits</div>
+          </div>
+        </div>
+        <div class="hero-card-tags">
+          <span class="tag">Strategy</span>
+          <span class="tag">Eng. Leadership</span>
+          <span class="tag">Cloud Infra</span>
+          <span class="tag">Product-Led</span>
+          <span class="tag">AI/ML</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS STRIP -->
+  <div class="logos-strip">
+    <div class="logos-label">Trusted by teams at</div>
+    <div class="logos-row">
+      <div class="logo-item">TechVentures</div>
+      <div class="logo-item">Launchpad AI</div>
+      <div class="logo-item">FounderScale</div>
+      <div class="logo-item">StackBridge</div>
+      <div class="logo-item">NexGen Labs</div>
+      <div class="logo-item">Orbit Health</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-label">About Chidi</div>
+          <h2 class="section-title">Engineering Vision Meets Business Reality</h2>
+          <p>
+            Chidi Oparah is a technology executive with over a decade of experience spanning fintech, healthtech, and SaaS. He has led distributed engineering teams, architected systems that scale to millions of users, and guided companies from zero-to-one through Series B.
+          </p>
+          <p>
+            Through Rvelate, Chidi embeds as a Fractional CTO — giving founders executive-level technical leadership at a fraction of the full-time cost, exactly when it matters most.
+          </p>
+          <ul class="about-checklist">
+            <li>
+              <div class="check-icon">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              Built and scaled engineering teams from 3 to 60+ engineers
+            </li>
+            <li>
+              <div class="check-icon">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              Proven track record in cloud-native and AI-driven product development
+            </li>
+            <li>
+              <div class="check-icon">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              Deep investor & fundraising diligence experience
+            </li>
+            <li>
+              <div class="check-icon">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              Board-level communication and technical roadmap execution
+            </li>
+          </ul>
+        </div>
+
+        <div class="about-visual">
+          <div class="about-quote">
+            <div class="quote-mark">"</div>
+            <p class="quote-text">
+              Great technology doesn't start with code — it starts with clarity. My job is to give you both the strategy and the execution to build what matters, faster.
+            </p>
+            <div class="quote-author">— Chidi Oparah, Fractional CTO</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-inner">
+      <div class="services-header">
+        <div>
+          <div class="section-label">Services</div>
+          <h2 class="section-title">Everything You Need from a CTO</h2>
+        </div>
+        <p class="section-subtitle">
+          From technical due diligence to hiring your first VP of Engineering, Chidi steps in where the impact is highest.
+        </p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🗺️</div>
+          <div class="service-title">Technology Strategy</div>
+          <p class="service-desc">Align your technical roadmap with business goals. Define make-vs-buy decisions, architecture vision, and long-term platform strategy.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">👥</div>
+          <div class="service-title">Team Building & Leadership</div>
+          <p class="service-desc">Hire, structure, and lead high-performing engineering teams. Set culture, processes, and performance standards that scale with growth.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏗️</div>
+          <div class="service-title">Architecture & Infrastructure</div>
+          <p class="service-desc">Design scalable, secure, and cost-efficient cloud architectures. Eliminate technical debt and prepare systems for 10x growth.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔍</div>
+          <div class="service-title">Technical Due Diligence</div>
+          <p class="service-desc">Investor-grade assessments of codebases, teams, and processes. Identify risks and opportunities before a deal closes.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🤖</div>
+          <div class="service-title">AI & Product Integration</div>
+          <p class="service-desc">Identify where AI creates real leverage in your product and operations. Design and ship AI-native features that users love.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📊</div>
+          <div class="service-title">Fundraise Readiness</div>
+          <p class="service-desc">Prepare your technical narrative for investors. Pitch decks, data rooms, and the engineering credibility that closes rounds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="section-inner">
+      <div style="text-align:center; max-width:580px; margin:0 auto 0;">
+        <div class="section-label">How It Works</div>
+        <h2 class="section-title">Up and Running in Days, Not Months</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-circle">1</div>
+          <div class="step-title">Discovery Call</div>
+          <p class="step-desc">A 30-minute conversation to understand your company, challenges, and what you need from a CTO right now.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">2</div>
+          <div class="step-title">Diagnostic Sprint</div>
+          <p class="step-desc">Chidi reviews your stack, team, and roadmap to surface the highest-leverage opportunities within the first week.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">3</div>
+          <div class="step-title">Embedded Leadership</div>
+          <p class="step-desc">Chidi joins your Slack, attends standups, and leads the work that moves the needle — from strategy to code review.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">4</div>
+          <div class="step-title">Momentum & Exit</div>
+          <p class="step-desc">Transition seamlessly to a full-time hire, or keep Chidi on as a long-term advisor as your company scales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHIDI -->
+  <section id="why">
+    <div class="section-inner">
+      <div class="section-label">Why Rvelate</div>
+      <h2 class="section-title">The Case for a Fractional CTO</h2>
+      <div class="why-grid">
+        <div>
+          <div class="why-item">
+            <div class="why-icon">⚡</div>
+            <div>
+              <div class="why-title">Speed Without Compromise</div>
+              <p class="why-desc">Get senior leadership active within days — no 3-month recruiting cycles, no onboarding lag. Chidi ships from day one.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">💰</div>
+            <div>
+              <div class="why-title">80% of the Value, 20% of the Cost</div>
+              <p class="why-desc">A full-time CTO can cost $350k–$500k/year. A Fractional CTO delivers the critical outcomes at a fraction of that investment.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">🎯</div>
+            <div>
+              <div class="why-title">Focused on Your Outcomes</div>
+              <p class="why-desc">No politics, no empire-building. Chidi is incentivized by results — shipping product, closing investors, and leveling up your team.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">🌐</div>
+            <div>
+              <div class="why-title">Cross-Industry Pattern Recognition</div>
+              <p class="why-desc">Having worked across fintech, healthtech, and SaaS, Chidi brings solutions that took others years to discover.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-aside">
+          <div class="aside-title">The Numbers</div>
+          <div class="aside-sub">What clients experience working with Chidi</div>
+          <div class="aside-metric">
+            <span class="metric-label">Average time to first milestone</span>
+            <span class="metric-value">2 weeks</span>
+          </div>
+          <div class="aside-metric">
+            <span class="metric-label">Clients who extend engagements</span>
+            <span class="metric-value">85%</span>
+          </div>
+          <div class="aside-metric">
+            <span class="metric-label">Reduction in delivery cycle time</span>
+            <span class="metric-value">~40%</span>
+          </div>
+          <div class="aside-metric">
+            <span class="metric-label">Avg. cost vs. full-time CTO hire</span>
+            <span class="metric-value">~25%</span>
+          </div>
+          <div class="aside-metric">
+            <span class="metric-label">Industries served</span>
+            <span class="metric-value">Fintech · Health · SaaS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="section-inner">
+      <div style="text-align:center; max-width:540px; margin:0 auto 0;">
+        <div class="section-label">Testimonials</div>
+        <h2 class="section-title">Founders Who've Been There</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"Chidi walked in and within two weeks had completely reframed how we thought about our infrastructure. He saved us from a $200k architectural mistake and helped us raise our seed round."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">SK</div>
+            <div>
+              <div class="testi-name">Sarah K.</div>
+              <div class="testi-role">CEO, Launchpad AI</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"We needed someone who could speak to investors, lead engineers, and still roll up their sleeves when needed. Chidi is that rare person. We wouldn't have shipped on time without him."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">MO</div>
+            <div>
+              <div class="testi-name">Marcus O.</div>
+              <div class="testi-role">Co-founder, StackBridge</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"Honestly, Chidi was more impactful in 3 months than some full-time CTOs I've worked with for 2 years. His ability to cut through complexity and get to what matters is unmatched."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">AT</div>
+            <div>
+              <div class="testi-name">Amara T.</div>
+              <div class="testi-role">Founder, Orbit Health</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact">
+    <div class="cta-inner">
+      <div class="section-label">Get Started</div>
+      <h2 class="section-title">Ready to Build Something Great?</h2>
+      <p>Whether you're pre-launch, post-Series A, or somewhere in between — if technology is a bottleneck, let's fix it. Book a free 30-minute call with Chidi today.</p>
+      <div class="cta-actions">
+        <a href="mailto:Chidi@rvelate.com" class="btn-primary">Book a Free Call</a>
+        <a href="https://rvelate.com" class="btn-ghost">Visit Rvelate.com</a>
+      </div>
+      <div class="cta-detail">
+        <span>No commitment</span>
+        <span></span>
+        <span>Response within 24h</span>
+        <span></span>
+        <span>Chidi@rvelate.com</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="#" class="footer-logo">Rvelate<span>.</span></a>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="mailto:Chidi@rvelate.com">Contact</a></li>
+      </ul>
+      <div class="footer-copy">© 2026 Rvelate. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-card, .why-item, .testi-card, .process-step').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
