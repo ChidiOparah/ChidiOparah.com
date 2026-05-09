@@ -22,6 +22,19 @@ You are helping maintain **chidioparah.com** — Chidi Oparah's personal brand s
 | `chidi-photo.jpg` | Professional portrait (full body, white background) |
 | `CNAME` | Contains `chidioparah.com` — do not modify |
 
+## Mobile — pattern to follow on all pages
+
+All three pages use the same hamburger nav pattern at ≤600px:
+- `<button class="hamburger" id="hamburger">` with three `<span class="hamburger-bar">` children in the nav
+- `<ul class="nav-links" id="navLinks">` — gets `.mobile-open` class when open
+- JS toggles `open` on button and `mobile-open` on list; clicking any link closes the menu
+- At 600px the list drops down as a full-width fixed overlay below the 68px nav bar
+- Section padding reduces: 52px at 600px, 72px at 900px (down from 100px desktop)
+- Hero CTA buttons stack vertically (`flex-direction: column`) on mobile
+- Diagnostic banner stacks vertically; `.btn-diagnostic` becomes full width
+- Footer stacks to column with wrapped links
+- When adding new nav items, add them inside `<ul class="nav-links" id="navLinks">`
+
 ## House rules — apply every time, no exceptions
 
 1. **No em dashes** — replace every `—` with a comma, period, or middle dot (`·`). Scan all affected files after any edit.
