@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chidi Oparah — Fractional CTO | Rvelate</title>
-  <meta name="description" content="Chidi Oparah is a Fractional CTO at Rvelate, helping startups and growth-stage companies build scalable technology strategies without the full-time cost." />
+  <title>Chidi Oparah — Profile | Fractional CTO & Enterprise Architect</title>
+  <meta name="description" content="25+ years of enterprise transformation across JPMorgan, Mastercard/Vocalink, HSBC, Nokia and Vodafone. Founder of Rvelate and creator of the 6E Method™." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -27,735 +27,193 @@
     }
 
     html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--black); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--black);
-      background: var(--white);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── NAV ── */
+    /* NAV */
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 5%;
-      height: 68px;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--gray-200);
-      transition: box-shadow 0.3s;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 68px;
+      background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200); transition: box-shadow 0.3s;
     }
     nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
-
-    .nav-logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--black);
-      text-decoration: none;
-      letter-spacing: -0.5px;
-    }
+    .nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.25rem; color: var(--black); text-decoration: none; letter-spacing: -0.5px; }
     .nav-logo span { color: var(--accent); }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--gray-600);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--gray-600); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: var(--black); }
-
-    .nav-cta {
-      background: var(--accent);
-      color: var(--white) !important;
-      padding: 0.5rem 1.25rem;
-      border-radius: 8px;
-      transition: background 0.2s, transform 0.15s !important;
-    }
+    .nav-active { color: var(--accent) !important; font-weight: 600 !important; }
+    .nav-cta { background: var(--accent); color: var(--white) !important; padding: 0.5rem 1.25rem; border-radius: 8px; transition: background 0.2s, transform 0.15s !important; }
     .nav-cta:hover { background: var(--accent-light) !important; transform: translateY(-1px); }
 
-    /* ── HERO ── */
-    .hero {
-      min-height: 100vh;
+    /* PAGE HERO */
+    .page-hero {
       background: var(--gradient);
-      display: flex;
-      align-items: center;
-      padding: 120px 5% 80px;
-      position: relative;
-      overflow: hidden;
+      padding: 140px 5% 80px;
+      position: relative; overflow: hidden;
     }
-    .hero::before {
-      content: '';
-      position: absolute;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(37,99,235,0.25) 0%, transparent 70%);
-      top: -100px; right: -100px;
-      pointer-events: none;
+    .page-hero::before {
+      content: ''; position: absolute; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 70%);
+      top: -150px; right: -100px; pointer-events: none;
     }
-    .hero::after {
-      content: '';
-      position: absolute;
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%);
-      bottom: 0; left: 10%;
-      pointer-events: none;
-    }
+    .page-hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 340px; gap: 4rem; align-items: center; }
 
-    .hero-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 380px;
-      gap: 4rem;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: rgba(255,255,255,0.8); }
 
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(37,99,235,0.2);
-      border: 1px solid rgba(37,99,235,0.4);
-      color: #93c5fd;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      margin-bottom: 1.5rem;
-    }
-    .hero-badge::before {
-      content: '';
-      width: 6px; height: 6px;
-      background: #60a5fa;
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.4); }
-    }
+    .page-hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.4rem, 4vw, 3.2rem); font-weight: 700; color: white; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 1rem; }
+    .page-hero h1 span { color: #60a5fa; }
+    .page-hero-desc { font-size: 1.05rem; color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 2rem; max-width: 520px; }
 
-    .hero h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2.8rem, 5vw, 4.2rem);
-      font-weight: 700;
-      line-height: 1.1;
-      color: var(--white);
-      letter-spacing: -1.5px;
-      margin-bottom: 1.25rem;
+    .profile-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .profile-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+      color: white; font-size: 0.85rem; font-weight: 600;
+      padding: 0.55rem 1.1rem; border-radius: 8px; text-decoration: none;
+      transition: background 0.2s;
     }
-    .hero h1 .accent { color: #60a5fa; }
+    .profile-link:hover { background: rgba(255,255,255,0.18); }
+    .profile-link.primary { background: var(--accent); border-color: transparent; }
+    .profile-link.primary:hover { background: var(--accent-light); }
 
-    .hero-sub {
-      font-size: 1.15rem;
-      color: rgba(255,255,255,0.65);
-      max-width: 520px;
-      margin-bottom: 2.5rem;
-      line-height: 1.7;
+    /* PROFILE CARD */
+    .profile-card {
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px; padding: 2rem; backdrop-filter: blur(16px); text-align: center;
     }
-
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .btn-primary {
-      background: var(--accent);
-      color: var(--white);
-      padding: 0.875rem 2rem;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-      box-shadow: 0 4px 24px rgba(37,99,235,0.45);
-    }
-    .btn-primary:hover {
-      background: var(--accent-light);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(37,99,235,0.55);
-    }
-    .btn-ghost {
-      background: transparent;
-      color: rgba(255,255,255,0.8);
-      padding: 0.875rem 2rem;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.25);
-      transition: background 0.2s, border-color 0.2s, transform 0.15s;
-    }
-    .btn-ghost:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.5);
-      transform: translateY(-2px);
-    }
-
-    /* hero card */
-    .hero-card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 20px;
-      padding: 2rem;
-      backdrop-filter: blur(16px);
-    }
-    .hero-avatar {
-      width: 88px; height: 88px;
-      border-radius: 50%;
+    .profile-avatar {
+      width: 100px; height: 100px; border-radius: 50%;
       background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: white;
-      margin: 0 auto 1.25rem;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 700;
+      color: white; margin: 0 auto 1rem; border: 3px solid rgba(255,255,255,0.15);
     }
-    .hero-card-name {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: var(--white);
-      text-align: center;
-      margin-bottom: 0.25rem;
-    }
-    .hero-card-title {
-      font-size: 0.85rem;
-      color: #93c5fd;
-      text-align: center;
-      font-weight: 500;
-      margin-bottom: 1.5rem;
-    }
-    .hero-stats {
+    .profile-card-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.2rem; color: white; margin-bottom: 0.2rem; }
+    .profile-card-role { font-size: 0.82rem; color: #93c5fd; margin-bottom: 0.15rem; }
+    .profile-card-loc { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem; }
+    .profile-skills { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; }
+    .skill-tag { background: rgba(37,99,235,0.25); border: 1px solid rgba(37,99,235,0.4); color: #93c5fd; font-size: 0.68rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; }
+
+    /* CONTENT */
+    .profile-body { max-width: 1100px; margin: 0 auto; padding: 80px 5%; display: grid; grid-template-columns: 1fr 320px; gap: 5rem; align-items: start; }
+
+    /* MAIN */
+    .profile-main {}
+    .profile-section { margin-bottom: 4rem; }
+    .profile-section:last-child { margin-bottom: 0; }
+    .profile-section-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--black); margin-bottom: 0.5rem; letter-spacing: -0.5px; padding-bottom: 0.75rem; border-bottom: 2px solid var(--gray-200); }
+    .profile-section-title span { color: var(--accent); }
+
+    /* SUMMARY */
+    .summary-text { font-size: 1rem; color: var(--gray-600); line-height: 1.85; }
+    .summary-text p { margin-bottom: 1rem; }
+    .summary-text p:last-child { margin-bottom: 0; }
+    .summary-highlight { background: var(--accent-faint); border-left: 3px solid var(--accent); padding: 1.25rem 1.5rem; border-radius: 0 10px 10px 0; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 1.7; font-weight: 500; }
+
+    /* EXPERIENCE */
+    .exp-list { display: flex; flex-direction: column; }
+    .exp-item {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-    }
-    .stat {
-      background: rgba(255,255,255,0.05);
-      padding: 1rem;
-      text-align: center;
-    }
-    .stat-number {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: white;
-      line-height: 1;
-      margin-bottom: 0.3rem;
-    }
-    .stat-label {
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.5);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-weight: 500;
-    }
-    .hero-card-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: center;
-    }
-    .tag {
-      background: rgba(37,99,235,0.25);
-      border: 1px solid rgba(37,99,235,0.4);
-      color: #93c5fd;
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-    }
-
-    /* ── LOGOS STRIP ── */
-    .logos-strip {
-      background: var(--gray-50);
-      padding: 2.5rem 5%;
-      border-bottom: 1px solid var(--gray-200);
-    }
-    .logos-label {
-      text-align: center;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gray-400);
-      margin-bottom: 1.5rem;
-    }
-    .logos-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-    .logo-item {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--gray-400);
-      letter-spacing: -0.5px;
-      opacity: 0.6;
-      transition: opacity 0.2s;
-    }
-    .logo-item:hover { opacity: 1; }
-
-    /* ── SECTIONS ── */
-    section { padding: 100px 5%; }
-    .section-inner { max-width: 1100px; margin: 0 auto; }
-
-    .section-label {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-    .section-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
-      font-weight: 700;
-      letter-spacing: -1px;
-      line-height: 1.15;
-      margin-bottom: 1.25rem;
-    }
-    .section-subtitle {
-      font-size: 1.05rem;
-      color: var(--gray-600);
-      max-width: 580px;
-      line-height: 1.75;
-    }
-
-    /* ── ABOUT ── */
-    #about { background: var(--white); }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-    .about-text p {
-      color: var(--gray-600);
-      font-size: 1.05rem;
-      line-height: 1.8;
-      margin-bottom: 1.25rem;
-    }
-    .about-checklist {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      margin-top: 1.5rem;
-    }
-    .about-checklist li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 0.95rem;
-      color: var(--gray-800);
-      font-weight: 500;
-    }
-    .check-icon {
-      flex-shrink: 0;
-      width: 22px; height: 22px;
-      background: var(--accent-faint);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 1px;
-    }
-    .check-icon svg { color: var(--accent); }
-
-    .about-visual {
-      background: var(--gradient);
-      border-radius: 24px;
-      padding: 2.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .about-visual::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 80% 20%, rgba(37,99,235,0.3), transparent 60%);
-    }
-    .about-quote {
-      position: relative;
-      z-index: 1;
-    }
-    .quote-mark {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 5rem;
-      line-height: 0.8;
-      color: rgba(37,99,235,0.5);
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    .quote-text {
-      font-size: 1.2rem;
-      line-height: 1.65;
-      color: rgba(255,255,255,0.9);
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-    }
-    .quote-author {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.5);
-      font-weight: 500;
-    }
-
-    /* ── SERVICES ── */
-    #services { background: var(--gray-50); }
-    .services-header {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: end;
-      margin-bottom: 4rem;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .service-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-      position: relative;
-      overflow: hidden;
-    }
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-light));
-      opacity: 0;
-      transition: opacity 0.25s;
-    }
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.08);
-      border-color: var(--gray-200);
-    }
-    .service-card:hover::before { opacity: 1; }
-
-    .service-icon {
-      width: 52px; height: 52px;
-      background: var(--accent-faint);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.25rem;
-      font-size: 1.5rem;
-    }
-    .service-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-      color: var(--black);
-    }
-    .service-desc {
-      font-size: 0.9rem;
-      color: var(--gray-600);
-      line-height: 1.75;
-    }
-
-    /* ── HOW IT WORKS ── */
-    #process { background: var(--white); }
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
+      grid-template-columns: 48px 1fr;
+      gap: 0 1.25rem;
+      padding-bottom: 2rem;
       position: relative;
     }
-    .process-grid::before {
-      content: '';
-      position: absolute;
-      top: 28px;
-      left: calc(12.5% + 28px);
-      right: calc(12.5% + 28px);
-      height: 2px;
-      background: var(--gray-200);
-      z-index: 0;
+    .exp-item:last-child { padding-bottom: 0; }
+    .exp-line {
+      display: flex; flex-direction: column; align-items: center; gap: 0;
     }
-    .process-step {
-      text-align: center;
-      position: relative;
-      z-index: 1;
+    .exp-dot {
+      width: 12px; height: 12px; border-radius: 50%; background: var(--accent); flex-shrink: 0;
+      margin-top: 6px; position: relative; z-index: 1; border: 2px solid white; box-shadow: 0 0 0 2px var(--accent);
     }
-    .step-circle {
-      width: 56px; height: 56px;
-      border-radius: 50%;
-      background: var(--white);
-      border: 2px solid var(--gray-200);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.25rem;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--accent);
-      transition: background 0.2s, border-color 0.2s, color 0.2s;
-    }
-    .process-step:hover .step-circle {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: white;
-    }
-    .step-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-      color: var(--black);
-    }
-    .step-desc {
-      font-size: 0.85rem;
-      color: var(--gray-600);
-      line-height: 1.65;
-    }
+    .exp-item.current .exp-dot { background: #22c55e; box-shadow: 0 0 0 2px #22c55e; animation: pulseGreen 2s infinite; }
+    @keyframes pulseGreen { 0%,100%{box-shadow: 0 0 0 2px #22c55e;} 50%{box-shadow: 0 0 0 5px rgba(34,197,94,0.2), 0 0 0 2px #22c55e;} }
+    .exp-connector { width: 2px; background: var(--gray-200); flex: 1; margin-top: 4px; }
+    .exp-item:last-child .exp-connector { display: none; }
 
-    /* ── WHY CHIDI ── */
-    #why { background: var(--gray-50); }
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-      margin-top: 3rem;
-    }
-    .why-item {
-      display: flex;
-      gap: 1.25rem;
-      padding: 1.5rem;
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 14px;
-      transition: box-shadow 0.2s;
-      margin-bottom: 1.25rem;
-    }
-    .why-item:last-child { margin-bottom: 0; }
-    .why-item:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
-    .why-icon {
-      flex-shrink: 0;
-      width: 44px; height: 44px;
-      background: var(--accent-faint);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-    }
-    .why-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
-      color: var(--black);
-    }
-    .why-desc {
-      font-size: 0.875rem;
-      color: var(--gray-600);
-      line-height: 1.65;
-    }
-    .why-aside {
-      background: var(--gradient);
-      border-radius: 20px;
-      padding: 2.5rem;
-      color: white;
-      position: sticky;
-      top: 90px;
-    }
-    .aside-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: white;
-    }
-    .aside-sub {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.6);
-      margin-bottom: 2rem;
-    }
-    .aside-metric {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .aside-metric:last-of-type { border-bottom: none; }
-    .metric-label { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
-    .metric-value {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: #60a5fa;
-    }
+    .exp-content { padding-top: 0; }
+    .exp-header { margin-bottom: 0.5rem; }
+    .exp-company { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem; color: var(--black); }
+    .exp-role { font-size: 0.9rem; font-weight: 600; color: var(--gray-800); margin-bottom: 0.2rem; }
+    .exp-meta { font-size: 0.8rem; color: var(--gray-400); margin-bottom: 0.75rem; }
+    .exp-desc { font-size: 0.875rem; color: var(--gray-600); line-height: 1.7; }
 
-    /* ── TESTIMONIALS ── */
-    #testimonials { background: var(--white); }
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
+    /* CERTIFICATIONS */
+    .certs-list { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.25rem; }
+    .cert-item {
+      display: flex; align-items: center; gap: 1rem;
+      background: var(--gray-50); border: 1px solid var(--gray-200);
+      border-radius: 12px; padding: 1rem 1.25rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
-    .testi-card {
-      background: var(--gray-50);
-      border: 1px solid var(--gray-200);
-      border-radius: 16px;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-    }
-    .stars {
-      color: #f59e0b;
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-      margin-bottom: 1rem;
-    }
-    .testi-text {
-      font-size: 0.95rem;
-      color: var(--gray-800);
-      line-height: 1.75;
-      flex: 1;
-      margin-bottom: 1.5rem;
-    }
-    .testi-author {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .testi-avatar {
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.85rem;
-      color: white;
-      flex-shrink: 0;
-    }
-    .testi-name { font-weight: 600; font-size: 0.9rem; color: var(--black); }
-    .testi-role { font-size: 0.78rem; color: var(--gray-400); margin-top: 1px; }
+    .cert-item:hover { border-color: var(--accent); box-shadow: 0 4px 16px rgba(37,99,235,0.08); }
+    .cert-item-icon { font-size: 1.5rem; }
+    .cert-item-name { font-weight: 600; font-size: 0.9rem; color: var(--gray-800); }
+    .cert-item-body { font-size: 0.78rem; color: var(--gray-400); margin-top: 0.1rem; }
 
-    /* ── CTA ── */
-    #contact {
-      background: var(--gradient);
-      padding: 100px 5%;
-    }
-    .cta-inner {
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .cta-inner .section-label { color: #93c5fd; }
-    .cta-inner .section-title { color: white; }
-    .cta-inner p { color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; font-size: 1.05rem; line-height: 1.75; }
-    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .cta-detail {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.45);
-    }
-    .cta-detail span { width: 4px; height: 4px; background: rgba(255,255,255,0.3); border-radius: 50%; }
+    /* EDUCATION */
+    .edu-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.25rem; }
+    .edu-item { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 1.25rem 1.5rem; }
+    .edu-school { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem; color: var(--black); margin-bottom: 0.2rem; }
+    .edu-degree { font-size: 0.875rem; color: var(--gray-600); }
 
-    /* ── FOOTER ── */
-    footer {
-      background: #0a0a0a;
-      padding: 3rem 5%;
+    /* SIDEBAR */
+    .profile-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 1.25rem; }
+
+    .sidebar-card { background: var(--white); border: 1.5px solid var(--gray-200); border-radius: 16px; padding: 1.5rem; }
+    .sidebar-card-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--black); margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--gray-200); }
+
+    .skills-list { display: flex; flex-direction: column; gap: 0.6rem; }
+    .skill-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .skill-name { font-size: 0.82rem; font-weight: 500; color: var(--gray-800); }
+    .skill-tags-row { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .skill-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+
+    .contact-quick { display: flex; flex-direction: column; gap: 0.75rem; }
+    .contact-quick-item {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.75rem 1rem; background: var(--gray-50); border: 1px solid var(--gray-200);
+      border-radius: 10px; text-decoration: none; color: inherit;
+      transition: border-color 0.2s, background 0.2s;
     }
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-    .footer-logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--white);
-      text-decoration: none;
-    }
+    .contact-quick-item:hover { border-color: var(--accent); background: var(--accent-faint); }
+    .contact-quick-icon { font-size: 1.1rem; }
+    .contact-quick-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-400); }
+    .contact-quick-value { font-size: 0.82rem; font-weight: 600; color: var(--gray-800); }
+
+    .avail-card { background: var(--accent-faint); border: 1.5px solid rgba(37,99,235,0.2); border-radius: 16px; padding: 1.5rem; }
+    .avail-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; }
+    .avail-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:0.5;transform:scale(1.4);} }
+    .avail-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--black); }
+    .avail-desc { font-size: 0.8rem; color: var(--gray-600); line-height: 1.6; margin-bottom: 1rem; }
+    .avail-btn { display: block; text-align: center; background: var(--accent); color: white; font-weight: 600; font-size: 0.85rem; padding: 0.7rem; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
+    .avail-btn:hover { background: var(--accent-light); }
+
+    /* FOOTER */
+    footer { background: #0a0a0a; padding: 3rem 5%; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--white); text-decoration: none; }
     .footer-logo span { color: var(--accent-light); }
-    .footer-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-    .footer-links a {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.4);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: white; }
-    .footer-copy {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.25);
-    }
+    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.25); }
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-card { display: none; }
-      .about-grid { grid-template-columns: 1fr; }
-      .services-header { grid-template-columns: 1fr; }
-      .services-grid { grid-template-columns: 1fr 1fr; }
-      .process-grid { grid-template-columns: 1fr 1fr; }
-      .process-grid::before { display: none; }
-      .why-grid { grid-template-columns: 1fr; }
-      .testi-grid { grid-template-columns: 1fr; }
+      .page-hero-inner { grid-template-columns: 1fr; }
+      .profile-card { display: none; }
+      .profile-body { grid-template-columns: 1fr; }
+      .profile-sidebar { position: static; }
     }
     @media (max-width: 600px) {
       nav .nav-links { display: none; }
-      .services-grid { grid-template-columns: 1fr; }
-      .process-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -763,362 +221,362 @@
 
   <!-- NAV -->
   <nav id="navbar">
-    <a href="#" class="nav-logo">Rvelate<span>.</span></a>
+    <a href="index.html" class="nav-logo">Rvelate<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#why">Why Chidi</a></li>
-      <li><a href="#contact" class="nav-cta">Work Together</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#method">6E Method</a></li>
+      <li><a href="chidi-oparah.html" class="nav-active">Profile</a></li>
+      <li><a href="contact.html" class="nav-cta">Work Together</a></li>
     </ul>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-inner">
-      <div class="hero-content">
-        <div class="hero-badge">Fractional CTO · Available Now</div>
-        <h1>
-          Technology<br />
-          Leadership<br />
-          <span class="accent">On Demand.</span>
-        </h1>
-        <p class="hero-sub">
-          Chidi Oparah brings senior engineering leadership to startups and growth-stage companies — without the overhead of a full-time executive hire.
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span>Profile</span>
+        </div>
+        <h1>Chidi <span>Oparah</span></h1>
+        <p class="page-hero-desc">
+          Founder · Fractional CTO · Enterprise Architect · SAFe SPC · Transformation Coach.<br />
+          25+ years inside JPMorgan, Mastercard/Vocalink, HSBC, Nokia, and Vodafone. Creator of the 6E Method™.
         </p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn-primary">Start the Conversation</a>
-          <a href="#services" class="btn-ghost">Explore Services</a>
+        <div class="profile-links">
+          <a href="https://cal.com/rvelate/clarity-call-30" target="_blank" rel="noopener noreferrer" class="profile-link primary">Book a Clarity Call</a>
+          <a href="https://linkedin.com/in/chidioparah" target="_blank" rel="noopener noreferrer" class="profile-link">LinkedIn Profile</a>
+          <a href="https://rvelate.scoreapp.com" target="_blank" rel="noopener noreferrer" class="profile-link">Free 6E Diagnostic</a>
         </div>
       </div>
 
-      <div class="hero-card">
-        <div class="hero-avatar">CO</div>
-        <div class="hero-card-name">Chidi Oparah</div>
-        <div class="hero-card-title">Fractional CTO · Rvelate.com</div>
-        <div class="hero-stats">
-          <div class="stat">
-            <div class="stat-number">12+</div>
-            <div class="stat-label">Years Exp.</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">30+</div>
-            <div class="stat-label">Startups Served</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">$50M+</div>
-            <div class="stat-label">Capital Raised</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">8</div>
-            <div class="stat-label">Successful Exits</div>
-          </div>
-        </div>
-        <div class="hero-card-tags">
-          <span class="tag">Strategy</span>
-          <span class="tag">Eng. Leadership</span>
-          <span class="tag">Cloud Infra</span>
-          <span class="tag">Product-Led</span>
-          <span class="tag">AI/ML</span>
+      <div class="profile-card">
+        <div class="profile-avatar">CO</div>
+        <div class="profile-card-name">Chidi Oparah</div>
+        <div class="profile-card-role">Founder & Fractional CTO · Rvelate</div>
+        <div class="profile-card-loc">London Area, United Kingdom · US · UK · UAE</div>
+        <div class="profile-skills">
+          <span class="skill-tag">Fractional CTO</span>
+          <span class="skill-tag">CTO Advisory</span>
+          <span class="skill-tag">Technology Strategy</span>
+          <span class="skill-tag">Enterprise Architecture</span>
+          <span class="skill-tag">6E Method™</span>
+          <span class="skill-tag">SAFe SPC</span>
+          <span class="skill-tag">TOGAF 9</span>
+          <span class="skill-tag">AWS</span>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- LOGOS STRIP -->
-  <div class="logos-strip">
-    <div class="logos-label">Trusted by teams at</div>
-    <div class="logos-row">
-      <div class="logo-item">TechVentures</div>
-      <div class="logo-item">Launchpad AI</div>
-      <div class="logo-item">FounderScale</div>
-      <div class="logo-item">StackBridge</div>
-      <div class="logo-item">NexGen Labs</div>
-      <div class="logo-item">Orbit Health</div>
     </div>
   </div>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-inner">
-      <div class="about-grid">
-        <div class="about-text">
-          <div class="section-label">About Chidi</div>
-          <h2 class="section-title">Engineering Vision Meets Business Reality</h2>
-          <p>
-            Chidi Oparah is a technology executive with over a decade of experience spanning fintech, healthtech, and SaaS. He has led distributed engineering teams, architected systems that scale to millions of users, and guided companies from zero-to-one through Series B.
-          </p>
-          <p>
-            Through Rvelate, Chidi embeds as a Fractional CTO — giving founders executive-level technical leadership at a fraction of the full-time cost, exactly when it matters most.
-          </p>
-          <ul class="about-checklist">
-            <li>
-              <div class="check-icon">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+  <!-- PROFILE BODY -->
+  <div style="background: var(--white);">
+    <div class="profile-body">
+
+      <!-- MAIN -->
+      <main class="profile-main">
+
+        <!-- SUMMARY -->
+        <div class="profile-section">
+          <h2 class="profile-section-title">Summary</h2>
+          <div class="summary-text">
+            <p>You've raised the capital. You have the customers. But your architecture, your delivery, and your governance aren't keeping pace — and your board is starting to notice. You now have multiple teams, products, and initiatives running at once. Priorities collide. Decisions keep bouncing back to you. Technical debt compounds. Your best people are stretched.</p>
+            <div class="summary-highlight">
+              This is the moment where effort stops being the answer. What you need now is structure.
+            </div>
+            <p>I'm Chidi Oparah — Founder, Fractional CTO, Enterprise Architect, SAFe SPC, and Transformation Coach. I have 25+ years inside JPMorgan, Mastercard/Vocalink, HSBC, Nokia, and Vodafone. I've seen what scaling chaos looks like from the inside and I know exactly what it takes to replace it with structural clarity and executable momentum.</p>
+            <p>I work with technology-led businesses — typically 60 to 120 engineers — scaling fast and under board or investor pressure to deliver, through my proprietary <strong>6E Method™</strong>: Evaluate, Envision, Empower, Equip, Enable, Evolve.</p>
+            <p>I work embedded, not detached. Steering forums, architecture reviews, leadership sessions — not reports from the outside. All engagements are fixed-fee and anchored to outcomes. Never day rates. I use AI-assisted analysis and diagnostic tooling as part of my working method — faster synthesis, sharper preparation, more precise recommendations from day one.</p>
+          </div>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="profile-section">
+          <h2 class="profile-section-title">Experience <span>· 25+ Years</span></h2>
+          <div class="exp-list">
+
+            <div class="exp-item current">
+              <div class="exp-line"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+              <div class="exp-content">
+                <div class="exp-company">Rvelate</div>
+                <div class="exp-role">Founder & Fractional Chief Technology Officer (CTO)</div>
+                <div class="exp-meta">November 2024 – Present · Global: US · UK · UAE</div>
+                <div class="exp-desc">Helping technology-led businesses with 60–120 engineers replace scaling chaos with structural clarity, predictable delivery, and board-ready governance — through the proprietary 6E Method™. Work sits at the intersection of enterprise architecture, operating model design, and executive coaching. Operates embedded inside organisations as a senior partner in the room. Typical engagements: 2-Week Clarity Audit, 90-Day Transformation Sprint, and Fractional CTO Partnership.</div>
               </div>
-              Built and scaled engineering teams from 3 to 60+ engineers
-            </li>
-            <li>
-              <div class="check-icon">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-line"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+              <div class="exp-content">
+                <div class="exp-company">Vocalink, a Mastercard Company</div>
+                <div class="exp-role">Business Transformation Consultant</div>
+                <div class="exp-meta">March 2025 – May 2025 · United Kingdom</div>
+                <div class="exp-desc">Business and agile transformation consultancy for one of the world's leading payment infrastructure organisations. Enterprise architecture strategy and Fractional CTO advisory across core payment platforms.</div>
               </div>
-              Proven track record in cloud-native and AI-driven product development
-            </li>
-            <li>
-              <div class="check-icon">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-line"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+              <div class="exp-content">
+                <div class="exp-company">J.P. Morgan Private Bank</div>
+                <div class="exp-role">Lean Programme Consultant</div>
+                <div class="exp-meta">October 2021 – January 2025 · 3 years 4 months · London, England, United Kingdom</div>
+                <div class="exp-desc">Led lean technology and operating model transformation across high-stakes banking platforms at one of the world's largest financial institutions. Improved delivery predictability, stakeholder visibility, and programme governance across complex, regulated environments.</div>
               </div>
-              Deep investor & fundraising diligence experience
-            </li>
-            <li>
-              <div class="check-icon">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-line"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+              <div class="exp-content">
+                <div class="exp-company">Oman Arab Bank</div>
+                <div class="exp-role">Transformation Consultant / Programme Lead</div>
+                <div class="exp-meta">July 2019 – September 2021 · 2 years 3 months · Sultanate of Oman</div>
+                <div class="exp-desc">Directed business and technology transformation across core banking and digital channels. Aligned architecture, risk frameworks, and regulatory requirements across a major Gulf region bank. Delivered operating model redesign and governance structures that improved delivery cadence and reduced operational risk.</div>
               </div>
-              Board-level communication and technical roadmap execution
-            </li>
-          </ul>
-        </div>
+            </div>
 
-        <div class="about-visual">
-          <div class="about-quote">
-            <div class="quote-mark">"</div>
-            <p class="quote-text">
-              Great technology doesn't start with code — it starts with clarity. My job is to give you both the strategy and the execution to build what matters, faster.
-            </p>
-            <div class="quote-author">— Chidi Oparah, Fractional CTO</div>
+            <div class="exp-item">
+              <div class="exp-line"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+              <div class="exp-content">
+                <div class="exp-company">HSBC</div>
+                <div class="exp-role">Global Programme Director</div>
+                <div class="exp-meta">October 2016 – May 2019 · 2 years 8 months · London, United Kingdom</div>
+                <div class="exp-desc">Led global technology programmes across one of the world's largest financial institutions.</div>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-line"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+              <div class="exp-content">
+                <div class="exp-company">Vodafone</div>
+                <div class="exp-role">Transformation Consultant / Programme Director</div>
+                <div class="exp-meta">November 2015 – September 2016 · 11 months</div>
+                <div class="exp-desc">Technology and operating model transformation for global telecoms leader.</div>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-line"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+              <div class="exp-content">
+                <div class="exp-company">GSK</div>
+                <div class="exp-role">Global Programme Consultant</div>
+                <div class="exp-meta">August 2015 – September 2016 · 1 year 2 months · EMEA</div>
+                <div class="exp-desc">EMEA-wide programme delivery across pharmaceutical technology estate.</div>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-line"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+              <div class="exp-content">
+                <div class="exp-company">NHS South London CSU</div>
+                <div class="exp-role">Programme Lead — Capital | MSP</div>
+                <div class="exp-meta">January 2015 – August 2015 · 8 months</div>
+                <div class="exp-desc">Capital programme delivery in high-complexity public sector environment.</div>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-line"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+              <div class="exp-content">
+                <div class="exp-company">University of East London</div>
+                <div class="exp-role">Programme Manager | MSP</div>
+                <div class="exp-meta">February 2013 – January 2015 · 2 years · London, United Kingdom</div>
+                <div class="exp-desc">Programme management across the university's technology estate.</div>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-line"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+              <div class="exp-content">
+                <div class="exp-company">Barclays Capital</div>
+                <div class="exp-role">Programme Manager</div>
+                <div class="exp-meta">January 2012 – January 2013 · 1 year 1 month · London</div>
+                <div class="exp-desc">Programme management within Barclays Capital's technology function.</div>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-line"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+              <div class="exp-content">
+                <div class="exp-company">Dimension Data</div>
+                <div class="exp-role">Global Programme Manager</div>
+                <div class="exp-meta">February 2011 – December 2011 · 11 months · London, United Kingdom</div>
+                <div class="exp-desc">Global programme management across technology services.</div>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-line"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+              <div class="exp-content">
+                <div class="exp-company">London Ambulance Service NHS Trust</div>
+                <div class="exp-role">Head of Networks</div>
+                <div class="exp-meta">March 2006 – February 2011 · 5 years</div>
+                <div class="exp-desc">Led network infrastructure strategy and operations for one of the UK's busiest emergency services organisations.</div>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-line"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+              <div class="exp-content">
+                <div class="exp-company">St George's University Hospitals NHS Foundation Trust</div>
+                <div class="exp-role">Network Services Manager</div>
+                <div class="exp-meta">September 2001 – January 2006 · 4 years 5 months · London, United Kingdom</div>
+                <div class="exp-desc">Network services management across a major NHS Foundation Trust hospital environment.</div>
+              </div>
+            </div>
+
           </div>
         </div>
-      </div>
+
+        <!-- CERTIFICATIONS -->
+        <div class="profile-section">
+          <h2 class="profile-section-title">Certifications</h2>
+          <div class="certs-list">
+            <div class="cert-item">
+              <span class="cert-item-icon">🏅</span>
+              <div>
+                <div class="cert-item-name">Certified ScrumMaster (CSM)</div>
+                <div class="cert-item-body">Scrum Alliance</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <span class="cert-item-icon">🏅</span>
+              <div>
+                <div class="cert-item-name">Agile Programme Manager</div>
+                <div class="cert-item-body">Professional Agile Certification</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <span class="cert-item-icon">🏛️</span>
+              <div>
+                <div class="cert-item-name">TOGAF 9 Certified</div>
+                <div class="cert-item-body">The Open Group — Enterprise Architecture Framework</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <span class="cert-item-icon">☁️</span>
+              <div>
+                <div class="cert-item-name">AWS Certified Developer — Associate</div>
+                <div class="cert-item-body">Amazon Web Services</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <span class="cert-item-icon">📋</span>
+              <div>
+                <div class="cert-item-name">PRINCE2 Practitioner</div>
+                <div class="cert-item-body">AXELOS — Projects in Controlled Environments</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="profile-section">
+          <h2 class="profile-section-title">Education</h2>
+          <div class="edu-list">
+            <div class="edu-item">
+              <div class="edu-school">Westminster University</div>
+              <div class="edu-degree">BSc Architectural Engineering</div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-school">Kings College Lagos</div>
+              <div class="edu-degree">School Captain</div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="profile-sidebar">
+
+        <div class="avail-card">
+          <div class="avail-header">
+            <div class="avail-dot"></div>
+            <div class="avail-title">Accepting New Clients</div>
+          </div>
+          <p class="avail-desc">Limited fractional CTO slots available for Q2/Q3 2026. Engagements run 2 weeks to 12 months — flexible to your needs.</p>
+          <a href="https://cal.com/rvelate/clarity-call-30" target="_blank" rel="noopener noreferrer" class="avail-btn">Book a 30-Min Clarity Call →</a>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">Top Skills</div>
+          <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+            <span style="background:var(--accent-faint);color:var(--accent);font-size:0.75rem;font-weight:600;padding:0.25rem 0.65rem;border-radius:999px;">Fractional CTO</span>
+            <span style="background:var(--accent-faint);color:var(--accent);font-size:0.75rem;font-weight:600;padding:0.25rem 0.65rem;border-radius:999px;">CTO Advisory</span>
+            <span style="background:var(--accent-faint);color:var(--accent);font-size:0.75rem;font-weight:600;padding:0.25rem 0.65rem;border-radius:999px;">Technology Strategy</span>
+            <span style="background:var(--accent-faint);color:var(--accent);font-size:0.75rem;font-weight:600;padding:0.25rem 0.65rem;border-radius:999px;">Enterprise Architecture</span>
+            <span style="background:var(--accent-faint);color:var(--accent);font-size:0.75rem;font-weight:600;padding:0.25rem 0.65rem;border-radius:999px;">Operating Model Design</span>
+            <span style="background:var(--accent-faint);color:var(--accent);font-size:0.75rem;font-weight:600;padding:0.25rem 0.65rem;border-radius:999px;">Agile Transformation</span>
+            <span style="background:var(--accent-faint);color:var(--accent);font-size:0.75rem;font-weight:600;padding:0.25rem 0.65rem;border-radius:999px;">SAFe SPC</span>
+            <span style="background:var(--accent-faint);color:var(--accent);font-size:0.75rem;font-weight:600;padding:0.25rem 0.65rem;border-radius:999px;">Governance Design</span>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">Get in Touch</div>
+          <div class="contact-quick">
+            <a href="https://linkedin.com/in/chidioparah" target="_blank" rel="noopener noreferrer" class="contact-quick-item">
+              <span class="contact-quick-icon">💼</span>
+              <div>
+                <div class="contact-quick-label">LinkedIn</div>
+                <div class="contact-quick-value">linkedin.com/in/chidioparah</div>
+              </div>
+            </a>
+            <a href="mailto:Chidi@rvelate.com" class="contact-quick-item">
+              <span class="contact-quick-icon">✉️</span>
+              <div>
+                <div class="contact-quick-label">Email</div>
+                <div class="contact-quick-value">Chidi@rvelate.com</div>
+              </div>
+            </a>
+            <a href="https://rvelate.scoreapp.com" target="_blank" rel="noopener noreferrer" class="contact-quick-item">
+              <span class="contact-quick-icon">📊</span>
+              <div>
+                <div class="contact-quick-label">Free Diagnostic</div>
+                <div class="contact-quick-value">rvelate.scoreapp.com</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">Sectors</div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;font-size:0.85rem;color:var(--gray-600);">
+            <div>💳 Financial Services & Payments</div>
+            <div>💻 SaaS & Technology Platforms</div>
+            <div>🏥 Healthtech & Life Sciences</div>
+            <div>🛒 Digital Commerce</div>
+            <div>🏦 PE-Backed Scale-ups</div>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">Markets</div>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <span style="background:var(--gray-50);border:1px solid var(--gray-200);font-size:0.8rem;font-weight:600;padding:0.4rem 0.9rem;border-radius:8px;color:var(--gray-800);">🇺🇸 United States</span>
+            <span style="background:var(--gray-50);border:1px solid var(--gray-200);font-size:0.8rem;font-weight:600;padding:0.4rem 0.9rem;border-radius:8px;color:var(--gray-800);">🇬🇧 United Kingdom</span>
+            <span style="background:var(--gray-50);border:1px solid var(--gray-200);font-size:0.8rem;font-weight:600;padding:0.4rem 0.9rem;border-radius:8px;color:var(--gray-800);">🇦🇪 UAE / Gulf</span>
+            <span style="background:var(--gray-50);border:1px solid var(--gray-200);font-size:0.8rem;font-weight:600;padding:0.4rem 0.9rem;border-radius:8px;color:var(--gray-800);">🇨🇦 Canada</span>
+          </div>
+        </div>
+
+      </aside>
     </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="section-inner">
-      <div class="services-header">
-        <div>
-          <div class="section-label">Services</div>
-          <h2 class="section-title">Everything You Need from a CTO</h2>
-        </div>
-        <p class="section-subtitle">
-          From technical due diligence to hiring your first VP of Engineering, Chidi steps in where the impact is highest.
-        </p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🗺️</div>
-          <div class="service-title">Technology Strategy</div>
-          <p class="service-desc">Align your technical roadmap with business goals. Define make-vs-buy decisions, architecture vision, and long-term platform strategy.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">👥</div>
-          <div class="service-title">Team Building & Leadership</div>
-          <p class="service-desc">Hire, structure, and lead high-performing engineering teams. Set culture, processes, and performance standards that scale with growth.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🏗️</div>
-          <div class="service-title">Architecture & Infrastructure</div>
-          <p class="service-desc">Design scalable, secure, and cost-efficient cloud architectures. Eliminate technical debt and prepare systems for 10x growth.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🔍</div>
-          <div class="service-title">Technical Due Diligence</div>
-          <p class="service-desc">Investor-grade assessments of codebases, teams, and processes. Identify risks and opportunities before a deal closes.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🤖</div>
-          <div class="service-title">AI & Product Integration</div>
-          <p class="service-desc">Identify where AI creates real leverage in your product and operations. Design and ship AI-native features that users love.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">📊</div>
-          <div class="service-title">Fundraise Readiness</div>
-          <p class="service-desc">Prepare your technical narrative for investors. Pitch decks, data rooms, and the engineering credibility that closes rounds.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section id="process">
-    <div class="section-inner">
-      <div style="text-align:center; max-width:580px; margin:0 auto 0;">
-        <div class="section-label">How It Works</div>
-        <h2 class="section-title">Up and Running in Days, Not Months</h2>
-      </div>
-      <div class="process-grid">
-        <div class="process-step">
-          <div class="step-circle">1</div>
-          <div class="step-title">Discovery Call</div>
-          <p class="step-desc">A 30-minute conversation to understand your company, challenges, and what you need from a CTO right now.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-circle">2</div>
-          <div class="step-title">Diagnostic Sprint</div>
-          <p class="step-desc">Chidi reviews your stack, team, and roadmap to surface the highest-leverage opportunities within the first week.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-circle">3</div>
-          <div class="step-title">Embedded Leadership</div>
-          <p class="step-desc">Chidi joins your Slack, attends standups, and leads the work that moves the needle — from strategy to code review.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-circle">4</div>
-          <div class="step-title">Momentum & Exit</div>
-          <p class="step-desc">Transition seamlessly to a full-time hire, or keep Chidi on as a long-term advisor as your company scales.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHIDI -->
-  <section id="why">
-    <div class="section-inner">
-      <div class="section-label">Why Rvelate</div>
-      <h2 class="section-title">The Case for a Fractional CTO</h2>
-      <div class="why-grid">
-        <div>
-          <div class="why-item">
-            <div class="why-icon">⚡</div>
-            <div>
-              <div class="why-title">Speed Without Compromise</div>
-              <p class="why-desc">Get senior leadership active within days — no 3-month recruiting cycles, no onboarding lag. Chidi ships from day one.</p>
-            </div>
-          </div>
-          <div class="why-item">
-            <div class="why-icon">💰</div>
-            <div>
-              <div class="why-title">80% of the Value, 20% of the Cost</div>
-              <p class="why-desc">A full-time CTO can cost $350k–$500k/year. A Fractional CTO delivers the critical outcomes at a fraction of that investment.</p>
-            </div>
-          </div>
-          <div class="why-item">
-            <div class="why-icon">🎯</div>
-            <div>
-              <div class="why-title">Focused on Your Outcomes</div>
-              <p class="why-desc">No politics, no empire-building. Chidi is incentivized by results — shipping product, closing investors, and leveling up your team.</p>
-            </div>
-          </div>
-          <div class="why-item">
-            <div class="why-icon">🌐</div>
-            <div>
-              <div class="why-title">Cross-Industry Pattern Recognition</div>
-              <p class="why-desc">Having worked across fintech, healthtech, and SaaS, Chidi brings solutions that took others years to discover.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="why-aside">
-          <div class="aside-title">The Numbers</div>
-          <div class="aside-sub">What clients experience working with Chidi</div>
-          <div class="aside-metric">
-            <span class="metric-label">Average time to first milestone</span>
-            <span class="metric-value">2 weeks</span>
-          </div>
-          <div class="aside-metric">
-            <span class="metric-label">Clients who extend engagements</span>
-            <span class="metric-value">85%</span>
-          </div>
-          <div class="aside-metric">
-            <span class="metric-label">Reduction in delivery cycle time</span>
-            <span class="metric-value">~40%</span>
-          </div>
-          <div class="aside-metric">
-            <span class="metric-label">Avg. cost vs. full-time CTO hire</span>
-            <span class="metric-value">~25%</span>
-          </div>
-          <div class="aside-metric">
-            <span class="metric-label">Industries served</span>
-            <span class="metric-value">Fintech · Health · SaaS</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials">
-    <div class="section-inner">
-      <div style="text-align:center; max-width:540px; margin:0 auto 0;">
-        <div class="section-label">Testimonials</div>
-        <h2 class="section-title">Founders Who've Been There</h2>
-      </div>
-      <div class="testi-grid">
-        <div class="testi-card">
-          <div class="stars">★★★★★</div>
-          <p class="testi-text">"Chidi walked in and within two weeks had completely reframed how we thought about our infrastructure. He saved us from a $200k architectural mistake and helped us raise our seed round."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">SK</div>
-            <div>
-              <div class="testi-name">Sarah K.</div>
-              <div class="testi-role">CEO, Launchpad AI</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card">
-          <div class="stars">★★★★★</div>
-          <p class="testi-text">"We needed someone who could speak to investors, lead engineers, and still roll up their sleeves when needed. Chidi is that rare person. We wouldn't have shipped on time without him."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">MO</div>
-            <div>
-              <div class="testi-name">Marcus O.</div>
-              <div class="testi-role">Co-founder, StackBridge</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card">
-          <div class="stars">★★★★★</div>
-          <p class="testi-text">"Honestly, Chidi was more impactful in 3 months than some full-time CTOs I've worked with for 2 years. His ability to cut through complexity and get to what matters is unmatched."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">AT</div>
-            <div>
-              <div class="testi-name">Amara T.</div>
-              <div class="testi-role">Founder, Orbit Health</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section id="contact">
-    <div class="cta-inner">
-      <div class="section-label">Get Started</div>
-      <h2 class="section-title">Ready to Build Something Great?</h2>
-      <p>Whether you're pre-launch, post-Series A, or somewhere in between — if technology is a bottleneck, let's fix it. Book a free 30-minute call with Chidi today.</p>
-      <div class="cta-actions">
-        <a href="mailto:Chidi@rvelate.com" class="btn-primary">Book a Free Call</a>
-        <a href="https://rvelate.com" class="btn-ghost">Visit Rvelate.com</a>
-      </div>
-      <div class="cta-detail">
-        <span>No commitment</span>
-        <span></span>
-        <span>Response within 24h</span>
-        <span></span>
-        <span>Chidi@rvelate.com</span>
-      </div>
-    </div>
-  </section>
+  </div>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
-      <a href="#" class="footer-logo">Rvelate<span>.</span></a>
+      <a href="index.html" class="footer-logo">Rvelate<span>.</span></a>
       <ul class="footer-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="mailto:Chidi@rvelate.com">Contact</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Engagements</a></li>
+        <li><a href="index.html#method">6E Method</a></li>
+        <li><a href="chidi-oparah.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="footer-copy">© 2026 Rvelate. All rights reserved.</div>
     </div>
@@ -1128,32 +586,6 @@
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 20);
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.service-card, .why-item, .testi-card, .process-step').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(24px)';
-      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-      observer.observe(el);
     });
   </script>
 </body>

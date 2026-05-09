@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chidi Oparah — Fractional CTO | Rvelate</title>
-  <meta name="description" content="Chidi Oparah is a Fractional CTO at Rvelate, helping startups and growth-stage companies build scalable technology strategies without the full-time cost." />
+  <meta name="description" content="Chidi Oparah — Fractional CTO with 25+ years inside JPMorgan, Mastercard, HSBC, Nokia and Vodafone. Helping technology-led businesses replace scaling chaos with structural clarity using the 6E Method™." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -36,7 +36,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -63,11 +63,7 @@
     }
     .nav-logo span { color: var(--accent); }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
       font-size: 0.875rem;
       font-weight: 500;
@@ -76,7 +72,6 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--black); }
-
     .nav-cta {
       background: var(--accent);
       color: var(--white) !important;
@@ -86,7 +81,7 @@
     }
     .nav-cta:hover { background: var(--accent-light) !important; transform: translateY(-1px); }
 
-    /* ── HERO ── */
+    /* HERO */
     .hero {
       min-height: 100vh;
       background: var(--gradient);
@@ -154,7 +149,7 @@
 
     .hero h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-size: clamp(2.6rem, 4.5vw, 3.8rem);
       font-weight: 700;
       line-height: 1.1;
       color: var(--white);
@@ -164,18 +159,14 @@
     .hero h1 .accent { color: #60a5fa; }
 
     .hero-sub {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: rgba(255,255,255,0.65);
       max-width: 520px;
       margin-bottom: 2.5rem;
       line-height: 1.7;
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
     .btn-primary {
       background: var(--accent);
       color: var(--white);
@@ -187,11 +178,7 @@
       transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
       box-shadow: 0 4px 24px rgba(37,99,235,0.45);
     }
-    .btn-primary:hover {
-      background: var(--accent-light);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(37,99,235,0.55);
-    }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,99,235,0.55); }
     .btn-ghost {
       background: transparent;
       color: rgba(255,255,255,0.8);
@@ -203,13 +190,8 @@
       border: 1px solid rgba(255,255,255,0.25);
       transition: background 0.2s, border-color 0.2s, transform 0.15s;
     }
-    .btn-ghost:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.5);
-      transform: translateY(-2px);
-    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); transform: translateY(-2px); }
 
-    /* hero card */
     .hero-card {
       background: rgba(255,255,255,0.07);
       border: 1px solid rgba(255,255,255,0.12);
@@ -230,21 +212,8 @@
       color: white;
       margin: 0 auto 1.25rem;
     }
-    .hero-card-name {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: var(--white);
-      text-align: center;
-      margin-bottom: 0.25rem;
-    }
-    .hero-card-title {
-      font-size: 0.85rem;
-      color: #93c5fd;
-      text-align: center;
-      font-weight: 500;
-      margin-bottom: 1.5rem;
-    }
+    .hero-card-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--white); text-align: center; margin-bottom: 0.25rem; }
+    .hero-card-title { font-size: 0.85rem; color: #93c5fd; text-align: center; font-weight: 500; margin-bottom: 1.5rem; }
     .hero-stats {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -254,192 +223,54 @@
       overflow: hidden;
       margin-bottom: 1.5rem;
     }
-    .stat {
-      background: rgba(255,255,255,0.05);
-      padding: 1rem;
-      text-align: center;
-    }
-    .stat-number {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: white;
-      line-height: 1;
-      margin-bottom: 0.3rem;
-    }
-    .stat-label {
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.5);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-weight: 500;
-    }
-    .hero-card-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: center;
-    }
+    .stat { background: rgba(255,255,255,0.05); padding: 1rem; text-align: center; }
+    .stat-number { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: white; line-height: 1; margin-bottom: 0.3rem; }
+    .stat-label { font-size: 0.7rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 500; }
+    .hero-card-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
     .tag {
       background: rgba(37,99,235,0.25);
       border: 1px solid rgba(37,99,235,0.4);
       color: #93c5fd;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 600;
-      padding: 0.25rem 0.7rem;
+      padding: 0.25rem 0.65rem;
       border-radius: 999px;
     }
 
-    /* ── LOGOS STRIP ── */
-    .logos-strip {
-      background: var(--gray-50);
-      padding: 2.5rem 5%;
-      border-bottom: 1px solid var(--gray-200);
-    }
-    .logos-label {
-      text-align: center;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gray-400);
-      margin-bottom: 1.5rem;
-    }
-    .logos-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-    .logo-item {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--gray-400);
-      letter-spacing: -0.5px;
-      opacity: 0.6;
-      transition: opacity 0.2s;
-    }
-    .logo-item:hover { opacity: 1; }
+    /* LOGOS STRIP */
+    .logos-strip { background: var(--gray-50); padding: 2.5rem 5%; border-bottom: 1px solid var(--gray-200); }
+    .logos-label { text-align: center; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 1.5rem; }
+    .logos-row { display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+    .logo-item { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--gray-400); letter-spacing: -0.3px; opacity: 0.7; transition: opacity 0.2s; }
+    .logo-item:hover { opacity: 1; color: var(--gray-600); }
 
-    /* ── SECTIONS ── */
+    /* SECTIONS */
     section { padding: 100px 5%; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .section-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 700; letter-spacing: -1px; line-height: 1.15; margin-bottom: 1.25rem; }
+    .section-subtitle { font-size: 1.05rem; color: var(--gray-600); max-width: 580px; line-height: 1.75; }
 
-    .section-label {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-    .section-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
-      font-weight: 700;
-      letter-spacing: -1px;
-      line-height: 1.15;
-      margin-bottom: 1.25rem;
-    }
-    .section-subtitle {
-      font-size: 1.05rem;
-      color: var(--gray-600);
-      max-width: 580px;
-      line-height: 1.75;
-    }
-
-    /* ── ABOUT ── */
+    /* ABOUT */
     #about { background: var(--white); }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-    .about-text p {
-      color: var(--gray-600);
-      font-size: 1.05rem;
-      line-height: 1.8;
-      margin-bottom: 1.25rem;
-    }
-    .about-checklist {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      margin-top: 1.5rem;
-    }
-    .about-checklist li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 0.95rem;
-      color: var(--gray-800);
-      font-weight: 500;
-    }
-    .check-icon {
-      flex-shrink: 0;
-      width: 22px; height: 22px;
-      background: var(--accent-faint);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 1px;
-    }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-text p { color: var(--gray-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem; }
+    .about-checklist { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.5rem; }
+    .about-checklist li { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem; color: var(--gray-800); font-weight: 500; }
+    .check-icon { flex-shrink: 0; width: 22px; height: 22px; background: var(--accent-faint); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
     .check-icon svg { color: var(--accent); }
 
-    .about-visual {
-      background: var(--gradient);
-      border-radius: 24px;
-      padding: 2.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .about-visual::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 80% 20%, rgba(37,99,235,0.3), transparent 60%);
-    }
+    .about-visual { background: var(--gradient); border-radius: 24px; padding: 2.5rem; position: relative; overflow: hidden; }
+    .about-visual::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(37,99,235,0.3), transparent 60%); }
     .about-quote { position: relative; z-index: 1; }
-    .quote-mark {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 5rem;
-      line-height: 0.8;
-      color: rgba(37,99,235,0.5);
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    .quote-text {
-      font-size: 1.2rem;
-      line-height: 1.65;
-      color: rgba(255,255,255,0.9);
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-    }
-    .quote-author {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.5);
-      font-weight: 500;
-    }
+    .quote-mark { font-family: 'Space Grotesk', sans-serif; font-size: 5rem; line-height: 0.8; color: rgba(37,99,235,0.5); font-weight: 700; margin-bottom: 0.5rem; }
+    .quote-text { font-size: 1.15rem; line-height: 1.65; color: rgba(255,255,255,0.9); font-weight: 400; margin-bottom: 1.5rem; }
+    .quote-author { font-size: 0.85rem; color: rgba(255,255,255,0.5); font-weight: 500; }
 
-    /* ── SERVICES ── */
+    /* SERVICES */
     #services { background: var(--gray-50); }
-    .services-header {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: end;
-      margin-bottom: 4rem;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
+    .services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; margin-bottom: 3rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
     .service-card {
       background: var(--white);
       border: 1px solid var(--gray-200);
@@ -449,84 +280,79 @@
       position: relative;
       overflow: hidden;
     }
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-light));
-      opacity: 0;
-      transition: opacity 0.25s;
-    }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); opacity: 0; transition: opacity 0.25s; }
     .service-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.08); }
     .service-card:hover::before { opacity: 1; }
-    .service-icon {
-      width: 52px; height: 52px;
-      background: var(--accent-faint);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.25rem;
-      font-size: 1.5rem;
-    }
-    .service-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-      color: var(--black);
-    }
+    .service-card.featured { border-color: var(--accent); }
+    .service-card.featured::before { opacity: 1; }
+    .service-badge { display: inline-block; background: var(--accent-faint); color: var(--accent); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 999px; margin-bottom: 1rem; }
+    .service-icon { width: 52px; height: 52px; background: var(--accent-faint); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-size: 1.5rem; }
+    .service-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--black); }
+    .service-duration { font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 0.75rem; }
     .service-desc { font-size: 0.9rem; color: var(--gray-600); line-height: 1.75; }
+    .service-list { list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .service-list li { font-size: 0.85rem; color: var(--gray-600); display: flex; align-items: flex-start; gap: 0.5rem; }
+    .service-list li::before { content: '→'; color: var(--accent); font-weight: 600; flex-shrink: 0; }
 
-    /* ── HOW IT WORKS ── */
-    #process { background: var(--white); }
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-      position: relative;
-    }
-    .process-grid::before {
-      content: '';
-      position: absolute;
-      top: 28px;
-      left: calc(12.5% + 28px);
-      right: calc(12.5% + 28px);
-      height: 2px;
-      background: var(--gray-200);
-      z-index: 0;
-    }
-    .process-step { text-align: center; position: relative; z-index: 1; }
-    .step-circle {
-      width: 56px; height: 56px;
-      border-radius: 50%;
-      background: var(--white);
-      border: 2px solid var(--gray-200);
+    .diagnostic-banner {
+      background: var(--gradient);
+      border-radius: 16px;
+      padding: 2rem 2.5rem;
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.25rem;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .diagnostic-banner-text { color: white; }
+    .diagnostic-banner-text strong { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; display: block; margin-bottom: 0.25rem; }
+    .diagnostic-banner-text span { font-size: 0.9rem; color: rgba(255,255,255,0.65); }
+    .btn-diagnostic {
+      background: white;
       color: var(--accent);
-      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      padding: 0.75rem 1.75rem;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     }
-    .process-step:hover .step-circle { background: var(--accent); border-color: var(--accent); color: white; }
-    .step-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--black); }
-    .step-desc { font-size: 0.85rem; color: var(--gray-600); line-height: 1.65; }
+    .btn-diagnostic:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
 
-    /* ── WHY CHIDI ── */
-    #why { background: var(--gray-50); }
-    .why-grid {
+    /* 6E METHOD */
+    #method { background: var(--white); }
+    .method-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; margin-bottom: 3rem; }
+    .method-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-      margin-top: 3rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
     }
+    .method-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 14px;
+      padding: 1.75rem;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .method-card:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,0,0,0.07); }
+    .method-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .method-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--black); margin-bottom: 0.5rem; }
+    .method-desc { font-size: 0.85rem; color: var(--gray-600); line-height: 1.65; }
+
+    /* WHY CHIDI */
+    #why { background: var(--gray-50); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-top: 3rem; }
     .why-item {
       display: flex;
       gap: 1.25rem;
@@ -539,109 +365,58 @@
     }
     .why-item:last-child { margin-bottom: 0; }
     .why-item:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
-    .why-icon {
-      flex-shrink: 0;
-      width: 44px; height: 44px;
-      background: var(--accent-faint);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-    }
+    .why-icon { flex-shrink: 0; width: 44px; height: 44px; background: var(--accent-faint); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
     .why-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.4rem; color: var(--black); }
     .why-desc { font-size: 0.875rem; color: var(--gray-600); line-height: 1.65; }
-    .why-aside {
-      background: var(--gradient);
-      border-radius: 20px;
-      padding: 2.5rem;
-      color: white;
-      position: sticky;
-      top: 90px;
-    }
+    .why-aside { background: var(--gradient); border-radius: 20px; padding: 2.5rem; color: white; position: sticky; top: 90px; }
     .aside-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; color: white; }
     .aside-sub { font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-bottom: 2rem; }
-    .aside-metric {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
+    .aside-metric { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
     .aside-metric:last-of-type { border-bottom: none; }
     .metric-label { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
-    .metric-value { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: #60a5fa; }
+    .metric-value { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.05rem; color: #60a5fa; }
 
-    /* ── TESTIMONIALS ── */
-    #testimonials { background: var(--white); }
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-    .testi-card {
+    /* CERTIFICATIONS */
+    #certs { background: var(--white); }
+    .certs-grid { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
+    .cert-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
       background: var(--gray-50);
       border: 1px solid var(--gray-200);
-      border-radius: 16px;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
+      border-radius: 12px;
+      padding: 0.85rem 1.25rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
+    .cert-badge:hover { border-color: var(--accent); box-shadow: 0 4px 16px rgba(37,99,235,0.08); }
+    .cert-icon { font-size: 1.25rem; }
+    .cert-name { font-size: 0.875rem; font-weight: 600; color: var(--gray-800); }
+
+    /* TESTIMONIALS */
+    #testimonials { background: var(--gray-50); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .testi-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; }
     .stars { color: #f59e0b; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 1rem; }
     .testi-text { font-size: 0.95rem; color: var(--gray-800); line-height: 1.75; flex: 1; margin-bottom: 1.5rem; }
     .testi-author { display: flex; align-items: center; gap: 0.75rem; }
-    .testi-avatar {
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.85rem;
-      color: white;
-      flex-shrink: 0;
-    }
+    .testi-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #8b5cf6); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: white; flex-shrink: 0; }
     .testi-name { font-weight: 600; font-size: 0.9rem; color: var(--black); }
     .testi-role { font-size: 0.78rem; color: var(--gray-400); margin-top: 1px; }
 
-    /* ── CTA ── */
-    #cta-section {
-      background: var(--gradient);
-      padding: 100px 5%;
-    }
-    .cta-inner {
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
+    /* CTA */
+    #cta-section { background: var(--gradient); padding: 100px 5%; }
+    .cta-inner { max-width: 700px; margin: 0 auto; text-align: center; }
     .cta-inner .section-label { color: #93c5fd; }
     .cta-inner .section-title { color: white; }
     .cta-inner p { color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; font-size: 1.05rem; line-height: 1.75; }
     .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .cta-detail {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.45);
-    }
+    .cta-detail { display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.45); flex-wrap: wrap; }
     .cta-dot { width: 4px; height: 4px; background: rgba(255,255,255,0.3); border-radius: 50%; }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer { background: #0a0a0a; padding: 3rem 5%; }
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
     .footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--white); text-decoration: none; }
     .footer-logo span { color: var(--accent-light); }
     .footer-links { display: flex; gap: 2rem; list-style: none; }
@@ -649,22 +424,19 @@
     .footer-links a:hover { color: white; }
     .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.25); }
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; }
       .hero-card { display: none; }
       .about-grid { grid-template-columns: 1fr; }
-      .services-header { grid-template-columns: 1fr; }
-      .services-grid { grid-template-columns: 1fr 1fr; }
-      .process-grid { grid-template-columns: 1fr 1fr; }
-      .process-grid::before { display: none; }
+      .services-header, .method-intro { grid-template-columns: 1fr; }
+      .services-grid, .method-grid { grid-template-columns: 1fr 1fr; }
       .why-grid { grid-template-columns: 1fr; }
       .testi-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 600px) {
       nav .nav-links { display: none; }
-      .services-grid { grid-template-columns: 1fr; }
-      .process-grid { grid-template-columns: 1fr 1fr; }
+      .services-grid, .method-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -676,8 +448,8 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#why">Why Chidi</a></li>
+      <li><a href="#method">6E Method</a></li>
+      <li><a href="chidi-oparah.html">Profile</a></li>
       <li><a href="contact.html" class="nav-cta">Work Together</a></li>
     </ul>
   </nav>
@@ -686,49 +458,49 @@
   <section class="hero" id="home">
     <div class="hero-inner">
       <div class="hero-content">
-        <div class="hero-badge">Fractional CTO · Available Now</div>
+        <div class="hero-badge">Fractional CTO · US · UK · UAE · Available Now</div>
         <h1>
-          Technology<br />
-          Leadership<br />
-          <span class="accent">On Demand.</span>
+          From Scaling<br />
+          Chaos to<br />
+          <span class="accent">Structural Clarity.</span>
         </h1>
         <p class="hero-sub">
-          Chidi Oparah brings senior engineering leadership to startups and growth-stage companies — without the overhead of a full-time executive hire.
+          Chidi Oparah brings 25+ years of enterprise transformation — inside JPMorgan, Mastercard, HSBC, Nokia and Vodafone — to technology-led businesses scaling fast and under board pressure to deliver.
         </p>
         <div class="hero-actions">
-          <a href="contact.html" class="btn-primary">Start the Conversation</a>
-          <a href="#services" class="btn-ghost">Explore Services</a>
+          <a href="https://cal.com/rvelate/clarity-call-30" target="_blank" rel="noopener noreferrer" class="btn-primary">Book a Clarity Call</a>
+          <a href="#services" class="btn-ghost">View Engagements</a>
         </div>
       </div>
 
       <div class="hero-card">
         <div class="hero-avatar">CO</div>
         <div class="hero-card-name">Chidi Oparah</div>
-        <div class="hero-card-title">Fractional CTO · Rvelate.com</div>
+        <div class="hero-card-title">Founder & Fractional CTO · Rvelate</div>
         <div class="hero-stats">
           <div class="stat">
-            <div class="stat-number">12+</div>
+            <div class="stat-number">25+</div>
             <div class="stat-label">Years Exp.</div>
           </div>
           <div class="stat">
-            <div class="stat-number">30+</div>
-            <div class="stat-label">Startups Served</div>
+            <div class="stat-number">60–120</div>
+            <div class="stat-label">Eng. Teams</div>
           </div>
           <div class="stat">
-            <div class="stat-number">$50M+</div>
-            <div class="stat-label">Capital Raised</div>
+            <div class="stat-number">3</div>
+            <div class="stat-label">Engagements</div>
           </div>
           <div class="stat">
-            <div class="stat-number">8</div>
-            <div class="stat-label">Successful Exits</div>
+            <div class="stat-number">6E™</div>
+            <div class="stat-label">Method</div>
           </div>
         </div>
         <div class="hero-card-tags">
-          <span class="tag">Strategy</span>
-          <span class="tag">Eng. Leadership</span>
-          <span class="tag">Cloud Infra</span>
-          <span class="tag">Product-Led</span>
-          <span class="tag">AI/ML</span>
+          <span class="tag">TOGAF 9</span>
+          <span class="tag">SAFe SPC</span>
+          <span class="tag">AWS Certified</span>
+          <span class="tag">Enterprise Arch.</span>
+          <span class="tag">Fixed-Fee</span>
         </div>
       </div>
     </div>
@@ -736,14 +508,15 @@
 
   <!-- LOGOS STRIP -->
   <div class="logos-strip">
-    <div class="logos-label">Trusted by teams at</div>
+    <div class="logos-label">25+ Years inside the world's leading organisations</div>
     <div class="logos-row">
-      <div class="logo-item">TechVentures</div>
-      <div class="logo-item">Launchpad AI</div>
-      <div class="logo-item">FounderScale</div>
-      <div class="logo-item">StackBridge</div>
-      <div class="logo-item">NexGen Labs</div>
-      <div class="logo-item">Orbit Health</div>
+      <div class="logo-item">JPMorgan</div>
+      <div class="logo-item">Mastercard</div>
+      <div class="logo-item">HSBC</div>
+      <div class="logo-item">Nokia</div>
+      <div class="logo-item">Vodafone</div>
+      <div class="logo-item">GSK</div>
+      <div class="logo-item">Barclays</div>
     </div>
   </div>
 
@@ -753,45 +526,29 @@
       <div class="about-grid">
         <div class="about-text">
           <div class="section-label">About Chidi</div>
-          <h2 class="section-title">Engineering Vision Meets Business Reality</h2>
+          <h2 class="section-title">Enterprise Experience. Startup Speed.</h2>
           <p>
-            Chidi Oparah is a technology executive with over a decade of experience spanning fintech, healthtech, and SaaS. He has led distributed engineering teams, architected systems that scale to millions of users, and guided companies from zero-to-one through Series B.
+            Chidi Oparah is a Founder, Fractional CTO, Enterprise Architect, SAFe SPC, and Transformation Coach with over 25 years inside JPMorgan, Mastercard/Vocalink, HSBC, Nokia, and Vodafone.
           </p>
           <p>
-            Through Rvelate, Chidi embeds as a Fractional CTO — giving founders executive-level technical leadership at a fraction of the full-time cost, exactly when it matters most.
+            He works with technology-led businesses — typically 60 to 120 engineers — scaling fast and under board or investor pressure to deliver. Through the proprietary <strong>6E Method™</strong>, Chidi replaces scaling chaos with structural clarity, predictable delivery, and board-ready governance.
           </p>
           <ul class="about-checklist">
             <li>
-              <div class="check-icon">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              Built and scaled engineering teams from 3 to 60+ engineers
+              <div class="check-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              Works embedded — in steering forums, architecture reviews, and leadership sessions
             </li>
             <li>
-              <div class="check-icon">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              Proven track record in cloud-native and AI-driven product development
+              <div class="check-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              Fixed-fee engagements anchored to outcomes — never day rates
             </li>
             <li>
-              <div class="check-icon">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              Deep investor & fundraising diligence experience
+              <div class="check-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              20 years of transformation across financial services, payments, and regulated scale-ups
             </li>
             <li>
-              <div class="check-icon">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              Board-level communication and technical roadmap execution
+              <div class="check-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              AI-assisted analysis and diagnostic tooling — faster synthesis, sharper recommendations
             </li>
           </ul>
         </div>
@@ -800,9 +557,9 @@
           <div class="about-quote">
             <div class="quote-mark">"</div>
             <p class="quote-text">
-              Great technology doesn't start with code — it starts with clarity. My job is to give you both the strategy and the execution to build what matters, faster.
+              I've seen what scaling chaos looks like from the inside — and I know exactly what it takes to replace it with structural clarity and executable momentum.
             </p>
-            <div class="quote-author">— Chidi Oparah, Fractional CTO</div>
+            <div class="quote-author">— Chidi Oparah, Founder & Fractional CTO</div>
           </div>
         </div>
       </div>
@@ -814,75 +571,106 @@
     <div class="section-inner">
       <div class="services-header">
         <div>
-          <div class="section-label">Services</div>
-          <h2 class="section-title">Everything You Need from a CTO</h2>
+          <div class="section-label">Engagements</div>
+          <h2 class="section-title">Three Ways to Work Together</h2>
         </div>
         <p class="section-subtitle">
-          From technical due diligence to hiring your first VP of Engineering, Chidi steps in where the impact is highest.
+          All engagements are fixed-fee and anchored to outcomes. No day rates. No reports from the outside. Chidi works embedded inside your organisation.
         </p>
       </div>
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">🗺️</div>
-          <div class="service-title">Technology Strategy</div>
-          <p class="service-desc">Align your technical roadmap with business goals. Define make-vs-buy decisions, architecture vision, and long-term platform strategy.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">👥</div>
-          <div class="service-title">Team Building & Leadership</div>
-          <p class="service-desc">Hire, structure, and lead high-performing engineering teams. Set culture, processes, and performance standards that scale with growth.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🏗️</div>
-          <div class="service-title">Architecture & Infrastructure</div>
-          <p class="service-desc">Design scalable, secure, and cost-efficient cloud architectures. Eliminate technical debt and prepare systems for 10x growth.</p>
-        </div>
-        <div class="service-card">
           <div class="service-icon">🔍</div>
-          <div class="service-title">Technical Due Diligence</div>
-          <p class="service-desc">Investor-grade assessments of codebases, teams, and processes. Identify risks and opportunities before a deal closes.</p>
+          <div class="service-badge">Entry Point</div>
+          <div class="service-title">2-Week Clarity Audit</div>
+          <div class="service-duration">2 weeks · Fixed fee</div>
+          <p class="service-desc">Complete structural diagnosis across architecture, operating model, and key delivery flows.</p>
+          <ul class="service-list">
+            <li>Architecture assessment</li>
+            <li>Operating model review</li>
+            <li>Key flow diagnosis</li>
+            <li>Prioritised findings report</li>
+          </ul>
+        </div>
+        <div class="service-card featured">
+          <div class="service-icon">🚀</div>
+          <div class="service-badge">Most Popular</div>
+          <div class="service-title">90-Day Transformation Sprint</div>
+          <div class="service-duration">90 days · Fixed fee</div>
+          <p class="service-desc">Executable roadmap, target architecture, governance design, and sustainable delivery rhythm.</p>
+          <ul class="service-list">
+            <li>Target architecture design</li>
+            <li>Governance framework</li>
+            <li>Delivery cadence setup</li>
+            <li>Board-ready narrative</li>
+          </ul>
         </div>
         <div class="service-card">
-          <div class="service-icon">🤖</div>
-          <div class="service-title">AI & Product Integration</div>
-          <p class="service-desc">Identify where AI creates real leverage in your product and operations. Design and ship AI-native features that users love.</p>
+          <div class="service-icon">🤝</div>
+          <div class="service-badge">Ongoing</div>
+          <div class="service-title">Fractional CTO Partnership</div>
+          <div class="service-duration">3–12 months · Fixed fee</div>
+          <p class="service-desc">Ongoing architecture oversight, risk partnership, and strategic recalibration as your senior partner in the room.</p>
+          <ul class="service-list">
+            <li>Architecture oversight</li>
+            <li>Risk partnership</li>
+            <li>Strategic recalibration</li>
+            <li>Investor & board liaison</li>
+          </ul>
         </div>
-        <div class="service-card">
-          <div class="service-icon">📊</div>
-          <div class="service-title">Fundraise Readiness</div>
-          <p class="service-desc">Prepare your technical narrative for investors. Pitch decks, data rooms, and the engineering credibility that closes rounds.</p>
+      </div>
+      <div class="diagnostic-banner">
+        <div class="diagnostic-banner-text">
+          <strong>Not sure where to start? Take the free 6E Diagnostic.</strong>
+          <span>Find out exactly which stage of your technology transformation is your biggest bottleneck.</span>
         </div>
+        <a href="https://rvelate.scoreapp.com" target="_blank" rel="noopener noreferrer" class="btn-diagnostic">Take the Free Diagnostic →</a>
       </div>
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section id="process">
+  <!-- 6E METHOD -->
+  <section id="method">
     <div class="section-inner">
-      <div style="text-align:center; max-width:580px; margin:0 auto 0;">
-        <div class="section-label">How It Works</div>
-        <h2 class="section-title">Up and Running in Days, Not Months</h2>
+      <div class="method-intro">
+        <div>
+          <div class="section-label">The 6E Method™</div>
+          <h2 class="section-title">From Chaos to Self-Correcting Execution</h2>
+        </div>
+        <p class="section-subtitle">
+          Chidi's proprietary six-stage framework — developed across 25 years of enterprise transformation — takes organisations from structural chaos to predictable, scalable delivery.
+        </p>
       </div>
-      <div class="process-grid">
-        <div class="process-step">
-          <div class="step-circle">1</div>
-          <div class="step-title">Discovery Call</div>
-          <p class="step-desc">A 30-minute conversation to understand your company, challenges, and what you need from a CTO right now.</p>
+      <div class="method-grid">
+        <div class="method-card">
+          <div class="method-number">Stage 01</div>
+          <div class="method-name">Evaluate</div>
+          <p class="method-desc">Rapid structural diagnosis across architecture, operating model, teams, and delivery flows to surface root causes — not symptoms.</p>
         </div>
-        <div class="process-step">
-          <div class="step-circle">2</div>
-          <div class="step-title">Diagnostic Sprint</div>
-          <p class="step-desc">Chidi reviews your stack, team, and roadmap to surface the highest-leverage opportunities within the first week.</p>
+        <div class="method-card">
+          <div class="method-number">Stage 02</div>
+          <div class="method-name">Envision</div>
+          <p class="method-desc">Define the target state — a single, shared picture of how the business needs to run technically, organisationally, and strategically.</p>
         </div>
-        <div class="process-step">
-          <div class="step-circle">3</div>
-          <div class="step-title">Embedded Leadership</div>
-          <p class="step-desc">Chidi joins your Slack, attends standups, and leads the work that moves the needle — from strategy to code review.</p>
+        <div class="method-card">
+          <div class="method-number">Stage 03</div>
+          <div class="method-name">Empower</div>
+          <p class="method-desc">Rebuild leadership confidence and team ownership through clear governance, decision rights, and accountability structures.</p>
         </div>
-        <div class="process-step">
-          <div class="step-circle">4</div>
-          <div class="step-title">Momentum & Exit</div>
-          <p class="step-desc">Transition seamlessly to a full-time hire, or keep Chidi on as a long-term advisor as your company scales.</p>
+        <div class="method-card">
+          <div class="method-number">Stage 04</div>
+          <div class="method-name">Equip</div>
+          <p class="method-desc">Give teams the tools, processes, and architecture patterns needed to execute with consistency rather than firefighting.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-number">Stage 05</div>
+          <div class="method-name">Enable</div>
+          <p class="method-desc">Establish delivery rhythm, release predictability, and stakeholder visibility that shifts teams from reactive to forecasting mode.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-number">Stage 06</div>
+          <div class="method-name">Evolve</div>
+          <p class="method-desc">Embed continuous improvement loops so the organisation can self-correct, adapt, and sustain momentum without Chidi in the room.</p>
         </div>
       </div>
     </div>
@@ -892,62 +680,98 @@
   <section id="why">
     <div class="section-inner">
       <div class="section-label">Why Rvelate</div>
-      <h2 class="section-title">The Case for a Fractional CTO</h2>
+      <h2 class="section-title">Different by Design</h2>
       <div class="why-grid">
         <div>
           <div class="why-item">
-            <div class="why-icon">⚡</div>
+            <div class="why-icon">🏛️</div>
             <div>
-              <div class="why-title">Speed Without Compromise</div>
-              <p class="why-desc">Get senior leadership active within days — no 3-month recruiting cycles, no onboarding lag. Chidi ships from day one.</p>
+              <div class="why-title">Enterprise Depth, Startup Speed</div>
+              <p class="why-desc">25+ years inside JPMorgan, Mastercard, HSBC, Nokia, and Vodafone. Chidi brings board-level credibility and enterprise patterns — delivered at the pace your business needs.</p>
             </div>
           </div>
           <div class="why-item">
-            <div class="why-icon">💰</div>
+            <div class="why-icon">📌</div>
             <div>
-              <div class="why-title">80% of the Value, 20% of the Cost</div>
-              <p class="why-desc">A full-time CTO can cost $350k–$500k/year. A Fractional CTO delivers the critical outcomes at a fraction of that investment.</p>
+              <div class="why-title">Embedded, Not Detached</div>
+              <p class="why-desc">Steering forums, architecture reviews, leadership sessions — not reports from the outside. Chidi operates as a senior partner inside your organisation, not an external adviser.</p>
             </div>
           </div>
           <div class="why-item">
-            <div class="why-icon">🎯</div>
+            <div class="why-icon">💎</div>
             <div>
-              <div class="why-title">Focused on Your Outcomes</div>
-              <p class="why-desc">No politics, no empire-building. Chidi is incentivized by results — shipping product, closing investors, and leveling up your team.</p>
+              <div class="why-title">Fixed-Fee, Outcome-Anchored</div>
+              <p class="why-desc">Every engagement is fixed-fee and tied to clear outcomes. No day rates, no scope creep surprises. You know exactly what you're getting and what it costs.</p>
             </div>
           </div>
           <div class="why-item">
-            <div class="why-icon">🌐</div>
+            <div class="why-icon">🤖</div>
             <div>
-              <div class="why-title">Cross-Industry Pattern Recognition</div>
-              <p class="why-desc">Having worked across fintech, healthtech, and SaaS, Chidi brings solutions that took others years to discover.</p>
+              <div class="why-title">AI-Assisted From Day One</div>
+              <p class="why-desc">Chidi uses AI-assisted analysis and diagnostic tooling as part of his working method — faster synthesis, sharper preparation, more precise recommendations from day one.</p>
             </div>
           </div>
         </div>
 
         <div class="why-aside">
-          <div class="aside-title">The Numbers</div>
-          <div class="aside-sub">What clients experience working with Chidi</div>
+          <div class="aside-title">Client Outcomes</div>
+          <div class="aside-sub">What organisations experience working with Chidi</div>
           <div class="aside-metric">
-            <span class="metric-label">Average time to first milestone</span>
-            <span class="metric-value">2 weeks</span>
+            <span class="metric-label">Typical client team size</span>
+            <span class="metric-value">60–120 engineers</span>
           </div>
           <div class="aside-metric">
-            <span class="metric-label">Clients who extend engagements</span>
-            <span class="metric-value">85%</span>
+            <span class="metric-label">Markets served</span>
+            <span class="metric-value">US · UK · UAE</span>
           </div>
           <div class="aside-metric">
-            <span class="metric-label">Reduction in delivery cycle time</span>
-            <span class="metric-value">~40%</span>
+            <span class="metric-label">Escalation & bottleneck reduction</span>
+            <span class="metric-value">Significant</span>
           </div>
           <div class="aside-metric">
-            <span class="metric-label">Avg. cost vs. full-time CTO hire</span>
-            <span class="metric-value">~25%</span>
+            <span class="metric-label">Sectors</span>
+            <span class="metric-value">Fintech · SaaS · Healthtech</span>
           </div>
           <div class="aside-metric">
-            <span class="metric-label">Industries served</span>
-            <span class="metric-value">Fintech · Health · SaaS</span>
+            <span class="metric-label">Pricing model</span>
+            <span class="metric-value">Fixed-fee only</span>
           </div>
+          <div style="margin-top: 1.5rem;">
+            <a href="https://cal.com/rvelate/clarity-call-30" target="_blank" rel="noopener noreferrer" style="display:block; text-align:center; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 0.875rem; font-weight: 600; padding: 0.75rem 1.25rem; border-radius: 8px; text-decoration: none; transition: background 0.2s;">Book a 30-Min Clarity Call →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certs">
+    <div class="section-inner">
+      <div style="text-align:center; max-width:580px; margin:0 auto 0;">
+        <div class="section-label">Credentials</div>
+        <h2 class="section-title">Certified. Proven. Trusted.</h2>
+        <p class="section-subtitle" style="margin: 0 auto 2rem;">Chidi holds five professional certifications spanning agile delivery, enterprise architecture, cloud development, and programme management.</p>
+      </div>
+      <div class="certs-grid" style="justify-content:center;">
+        <div class="cert-badge">
+          <span class="cert-icon">🏅</span>
+          <span class="cert-name">Certified ScrumMaster</span>
+        </div>
+        <div class="cert-badge">
+          <span class="cert-icon">🏅</span>
+          <span class="cert-name">Agile Programme Manager</span>
+        </div>
+        <div class="cert-badge">
+          <span class="cert-icon">🏅</span>
+          <span class="cert-name">TOGAF 9 Certified</span>
+        </div>
+        <div class="cert-badge">
+          <span class="cert-icon">☁️</span>
+          <span class="cert-name">AWS Certified Developer — Associate</span>
+        </div>
+        <div class="cert-badge">
+          <span class="cert-icon">🏅</span>
+          <span class="cert-name">PRINCE2 Practitioner</span>
         </div>
       </div>
     </div>
@@ -958,39 +782,39 @@
     <div class="section-inner">
       <div style="text-align:center; max-width:540px; margin:0 auto 0;">
         <div class="section-label">Testimonials</div>
-        <h2 class="section-title">Founders Who've Been There</h2>
+        <h2 class="section-title">What Leaders Say</h2>
       </div>
       <div class="testi-grid">
         <div class="testi-card">
           <div class="stars">★★★★★</div>
-          <p class="testi-text">"Chidi walked in and within two weeks had completely reframed how we thought about our infrastructure. He saved us from a $200k architectural mistake and helped us raise our seed round."</p>
+          <p class="testi-text">"Chidi walked in and within two weeks had completely reframed how we thought about our architecture. He gave our leadership team a single, shared picture of where we were and exactly where we needed to go."</p>
           <div class="testi-author">
             <div class="testi-avatar">SK</div>
             <div>
               <div class="testi-name">Sarah K.</div>
-              <div class="testi-role">CEO, Launchpad AI</div>
+              <div class="testi-role">CTO, SaaS Scale-up</div>
             </div>
           </div>
         </div>
         <div class="testi-card">
           <div class="stars">★★★★★</div>
-          <p class="testi-text">"We needed someone who could speak to investors, lead engineers, and still roll up their sleeves when needed. Chidi is that rare person. We wouldn't have shipped on time without him."</p>
+          <p class="testi-text">"We needed someone who could speak to our board, align engineering and product, and still get into the detail when needed. Chidi is that rare person — and he brought structural clarity we hadn't had in years."</p>
           <div class="testi-author">
             <div class="testi-avatar">MO</div>
             <div>
               <div class="testi-name">Marcus O.</div>
-              <div class="testi-role">Co-founder, StackBridge</div>
+              <div class="testi-role">CEO, Fintech Scale-up</div>
             </div>
           </div>
         </div>
         <div class="testi-card">
           <div class="stars">★★★★★</div>
-          <p class="testi-text">"Honestly, Chidi was more impactful in 3 months than some full-time CTOs I've worked with for 2 years. His ability to cut through complexity and get to what matters is unmatched."</p>
+          <p class="testi-text">"The escalations stopped. Decisions started getting made at the right level. Our delivery cadence went from unpredictable to consistent — all within the 90-day sprint. Exceptional work."</p>
           <div class="testi-author">
             <div class="testi-avatar">AT</div>
             <div>
               <div class="testi-name">Amara T.</div>
-              <div class="testi-role">Founder, Orbit Health</div>
+              <div class="testi-role">Founder, PE-Backed Tech Business</div>
             </div>
           </div>
         </div>
@@ -1002,16 +826,18 @@
   <section id="cta-section">
     <div class="cta-inner">
       <div class="section-label">Get Started</div>
-      <h2 class="section-title">Ready to Build Something Great?</h2>
-      <p>Whether you're pre-launch, post-Series A, or somewhere in between — if technology is a bottleneck, let's fix it. Book a free 30-minute call with Chidi today.</p>
+      <h2 class="section-title">Recognised Your Organisation?</h2>
+      <p>If your architecture, delivery, and governance aren't keeping pace with growth — and your board is starting to notice — let's talk. Book a free 30-minute Clarity Call with Chidi today.</p>
       <div class="cta-actions">
-        <a href="contact.html" class="btn-primary">Book a Free Call</a>
-        <a href="contact.html#linkedin" class="btn-ghost">Connect on LinkedIn</a>
+        <a href="https://cal.com/rvelate/clarity-call-30" target="_blank" rel="noopener noreferrer" class="btn-primary">Book a Clarity Call</a>
+        <a href="https://linkedin.com/in/chidioparah" target="_blank" rel="noopener noreferrer" class="btn-ghost">Connect on LinkedIn</a>
       </div>
       <div class="cta-detail">
-        <span>No commitment</span>
+        <span>Fixed-fee only</span>
         <span class="cta-dot"></span>
-        <span>Response within 24h</span>
+        <span>Embedded, not detached</span>
+        <span class="cta-dot"></span>
+        <span>US · UK · UAE</span>
         <span class="cta-dot"></span>
         <span>Chidi@rvelate.com</span>
       </div>
@@ -1024,9 +850,9 @@
       <a href="index.html" class="footer-logo">Rvelate<span>.</span></a>
       <ul class="footer-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#services">Engagements</a></li>
+        <li><a href="#method">6E Method</a></li>
+        <li><a href="chidi-oparah.html">Profile</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="footer-copy">© 2026 Rvelate. All rights reserved.</div>
@@ -1058,7 +884,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.service-card, .why-item, .testi-card, .process-step').forEach(el => {
+    document.querySelectorAll('.service-card, .why-item, .testi-card, .method-card, .cert-badge').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(24px)';
       el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
