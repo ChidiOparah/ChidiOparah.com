@@ -84,3 +84,24 @@ Always stage specific files by name, never `git add .` or `git add -A`.
 - LinkedIn: https://linkedin.com/in/chidioparah
 - Substack: https://substack.com/@chidioparah
 - Email: Chidi@rvelate.com
+
+## Self-update instructions — run at the end of every task
+
+After completing any task, check whether this skill file needs updating before committing. Update it if any of the following changed:
+
+| What changed | What to update in this file |
+|---|---|
+| New HTML page created | Add row to the Files table |
+| New link added to the site | Add to Links section |
+| New house rule established (e.g. new formatting rule) | Add to House rules |
+| A convention was removed or changed | Edit the relevant section |
+| New CSS variable introduced | Add to CSS variables block |
+| New section type added to a page | Update the Files table description for that page |
+| Booking/diagnostic/social URL changed | Update Project overview and Links |
+
+**How to update:**
+1. Edit `.claude/commands/website.md` with the relevant change
+2. Stage and commit it in the same commit as the site changes — not a separate commit
+3. Use the message format: `Update /website skill: <what changed>`
+
+If nothing in the skill needs updating, skip this step silently.

@@ -1,4 +1,17 @@
 {
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "grep -q 'Self-update instructions' '.claude/commands/website.md' && echo 'skill ok' || echo 'WARNING: /website skill missing self-update section'"
+          }
+        ]
+      }
+    ]
+  },
   "permissions": {
     "allow": [
       "Bash(git init *)",
@@ -12,7 +25,13 @@
       "Bash(ssh-add -l)",
       "Bash(ssh-keygen *)",
       "Bash(ssh-keyscan github.com)",
-      "Bash(ssh -T git@github.com)"
+      "Bash(ssh -T git@github.com)",
+      "Bash(aws sts *)",
+      "Bash(aws route53 *)",
+      "Bash(dig chidioparah.com A +short)",
+      "Bash(dig www.chidioparah.com CNAME +short)",
+      "Bash(curl -sI https://chidioparah.com)",
+      "WebFetch(domain:rvelate.com)"
     ]
   }
 }
