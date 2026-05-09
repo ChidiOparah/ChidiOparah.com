@@ -113,7 +113,7 @@
       margin: 0 auto;
       width: 100%;
       display: grid;
-      grid-template-columns: 1fr 380px;
+      grid-template-columns: 1fr 440px;
       gap: 4rem;
       align-items: center;
       position: relative;
@@ -199,21 +199,32 @@
       padding: 2rem;
       backdrop-filter: blur(16px);
     }
-    .hero-avatar {
-      width: 88px; height: 88px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: white;
-      margin: 0 auto 1.25rem;
+    .hero-portrait {
+      width: 100%;
+      height: 320px;
+      border-radius: 14px;
       overflow: hidden;
+      background: linear-gradient(180deg, #1e3a5f 0%, #0f172a 100%);
+      margin-bottom: 1.25rem;
+      cursor: pointer;
+      position: relative;
     }
-    .hero-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 5%; cursor: pointer; }
+    .hero-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center bottom;
+      display: block;
+    }
+    .hero-portrait:hover::after {
+      content: '🔍 View photo';
+      position: absolute;
+      bottom: 10px; left: 50%; transform: translateX(-50%);
+      background: rgba(0,0,0,0.55);
+      color: white; font-size: 0.75rem; font-weight: 600;
+      padding: 0.3rem 0.75rem; border-radius: 999px;
+      white-space: nowrap;
+    }
 
     /* PHOTO MODAL */
     .photo-modal { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.75); backdrop-filter: blur(6px); align-items: center; justify-content: center; }
@@ -227,7 +238,7 @@
     .hero-card-title { font-size: 0.85rem; color: #93c5fd; text-align: center; font-weight: 500; margin-bottom: 1.5rem; }
     .hero-stats {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 1px;
       background: rgba(255,255,255,0.1);
       border-radius: 12px;
@@ -436,6 +447,9 @@
     .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.25); }
 
     /* RESPONSIVE */
+    @media (max-width: 1050px) {
+      .hero-inner { grid-template-columns: 1fr 380px; }
+    }
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; }
       .hero-card { display: none; }
@@ -486,7 +500,9 @@
       </div>
 
       <div class="hero-card">
-        <div class="hero-avatar"><img src="chidi-photo.jpg" alt="Chidi Oparah" id="openModal" /></div>
+        <div class="hero-portrait" id="openModal">
+          <img src="chidi-photo.jpg" alt="Chidi Oparah" />
+        </div>
         <div class="hero-card-name">Chidi Oparah</div>
         <div class="hero-card-title">Founder & Fractional CTO · Rvelate</div>
         <div class="hero-stats">
@@ -496,11 +512,7 @@
           </div>
           <div class="stat">
             <div class="stat-number">60–120</div>
-            <div class="stat-label">Eng. Teams</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">3</div>
-            <div class="stat-label">Engagements</div>
+            <div class="stat-label">Engineers</div>
           </div>
           <div class="stat">
             <div class="stat-number">6E™</div>
