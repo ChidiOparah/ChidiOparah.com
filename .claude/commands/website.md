@@ -16,7 +16,7 @@ You are helping maintain **chidioparah.com** — Chidi Oparah's personal brand s
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Homepage — hero, logos, pain points, about, services, 6E method, why Chidi, certs, testimonials, CTA |
+| `index.html` | Homepage — hero, logos, pain points, about, services, 6E method (simplified stage pills + link to Rvelate.com), why Chidi, certs, testimonials, CTA |
 | `chidi-oparah.html` | Full profile — experience timeline, certifications, education, sidebar |
 | `contact.html` | Contact form + sidebar cards |
 | `chidi-photo.jpg` | Professional portrait (full body, white background) |
@@ -58,7 +58,7 @@ All three pages use the same hamburger nav pattern at ≤600px:
 
 - Primary hook: "Your technology business is scaling. Your architecture, delivery, and governance aren't keeping pace."
 - Services: 2-Week Clarity Audit / 90-Day Transformation Sprint / Fractional CTO Partnership
-- Framework: 6E Method™ (Evaluate, Envision, Empower, Equip, Enable, Evolve)
+- Framework: 6E Method™ (Evaluate, Envision, Empower, Equip, Enable, Evolve) — shown as stage pills on homepage, links to rvelate.com for full detail
 - Credentials to emphasise: SAFe SPC, TOGAF 9, AWS Certified
 - Companies: JPMorgan, Mastercard/Vocalink, HSBC, Nokia, Vodafone, GSK, Barclays
 - Markets: US · UK · UAE · Canada
