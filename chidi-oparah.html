@@ -93,7 +93,16 @@
       color: white; margin: 0 auto 1rem; border: 3px solid rgba(255,255,255,0.15);
       overflow: hidden;
     }
-    .profile-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .profile-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 5%; cursor: pointer; }
+
+    /* PHOTO MODAL */
+    .photo-modal { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.75); backdrop-filter: blur(6px); align-items: center; justify-content: center; }
+    .photo-modal.open { display: flex; }
+    .photo-modal-inner { position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 32px 80px rgba(0,0,0,0.5); max-width: 360px; width: 90%; }
+    .photo-modal-inner img { width: 100%; display: block; }
+    .photo-modal-close { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border-radius: 50%; background: rgba(0,0,0,0.5); border: none; color: white; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+    .photo-modal-close:hover { background: rgba(0,0,0,0.8); }
+    .photo-modal-name { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 2rem 1.5rem 1.25rem; color: white; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem; }
     .profile-card-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.2rem; color: white; margin-bottom: 0.2rem; }
     .profile-card-role { font-size: 0.82rem; color: #93c5fd; margin-bottom: 0.15rem; }
     .profile-card-loc { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem; }
@@ -256,7 +265,7 @@
       </div>
 
       <div class="profile-card">
-        <div class="profile-avatar"><img src="chidi-photo.jpg" alt="Chidi Oparah" /></div>
+        <div class="profile-avatar"><img src="chidi-photo.jpg" alt="Chidi Oparah" id="openModal" /></div>
         <div class="profile-card-name">Chidi Oparah</div>
         <div class="profile-card-role">Founder & Fractional CTO · Rvelate</div>
         <div class="profile-card-loc">London Area, United Kingdom · US · UK · UAE</div>
@@ -585,11 +594,26 @@
     </div>
   </footer>
 
+  <!-- PHOTO MODAL -->
+  <div class="photo-modal" id="photoModal">
+    <div class="photo-modal-inner">
+      <img src="chidi-photo.jpg" alt="Chidi Oparah" />
+      <div class="photo-modal-name">Chidi Oparah · Founder & Fractional CTO</div>
+      <button class="photo-modal-close" id="closeModal">✕</button>
+    </div>
+  </div>
+
   <script>
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 20);
     });
+
+    const modal = document.getElementById('photoModal');
+    document.getElementById('openModal').addEventListener('click', () => modal.classList.add('open'));
+    document.getElementById('closeModal').addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
   </script>
 </body>
 </html>
