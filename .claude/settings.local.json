@@ -1,4 +1,32 @@
 {
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "WebFetch",
+      "WebSearch",
+      "Skill",
+      "mcp__ec42b351-dbea-47c8-8126-12276171e7a4__get_posts",
+      "mcp__ec42b351-dbea-47c8-8126-12276171e7a4__get_profile_history"
+    ],
+    "deny": [
+      "Bash(rm -rf /)",
+      "Bash(rm -rf /*)",
+      "Bash(rm -rf ~)",
+      "Bash(rm -rf ~/*)",
+      "Bash(sudo rm *)",
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git reset --hard origin/*)",
+      "Read(./.env)",
+      "Read(./**/.env)",
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/credentials)"
+    ]
+  },
   "hooks": {
     "Stop": [
       {
@@ -10,28 +38,6 @@
           }
         ]
       }
-    ]
-  },
-  "permissions": {
-    "allow": [
-      "Bash(git init *)",
-      "Bash(git remote *)",
-      "Bash(git fetch *)",
-      "Bash(git reset *)",
-      "Bash(git add *)",
-      "Bash(git commit -m ' *)",
-      "Bash(git push *)",
-      "Bash(git commit *)",
-      "Bash(ssh-add -l)",
-      "Bash(ssh-keygen *)",
-      "Bash(ssh-keyscan github.com)",
-      "Bash(ssh -T git@github.com)",
-      "Bash(aws sts *)",
-      "Bash(aws route53 *)",
-      "Bash(dig chidioparah.com A +short)",
-      "Bash(dig www.chidioparah.com CNAME +short)",
-      "Bash(curl -sI https://chidioparah.com)",
-      "WebFetch(domain:rvelate.com)"
     ]
   }
 }
