@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chidioparah.com/sitemap.xml
