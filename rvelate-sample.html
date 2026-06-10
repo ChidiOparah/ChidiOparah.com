@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Rvelate™ | Structural Clarity for Scaling Technology Organisations</title>
+  <meta name="description" content="Rvelate helps technology-led organisations replace scaling chaos with structural clarity, predictable delivery, and board-ready governance through the 6E Method™." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a; --white: #ffffff;
+      --gray-50: #f9fafb; --gray-100: #f3f4f6; --gray-200: #e5e7eb;
+      --gray-400: #9ca3af; --gray-600: #4b5563; --gray-800: #1f2937;
+      --accent: #2563eb; --accent-light: #3b82f6; --accent-faint: #eff6ff;
+      --gradient: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #0f172a 100%);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--black); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 68px;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200); transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+    .nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--black); text-decoration: none; letter-spacing: -0.5px; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--gray-600); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-diagnostic { color: var(--accent) !important; font-weight: 600 !important; }
+    .nav-cta { background: var(--accent); color: var(--white) !important; padding: 0.5rem 1.25rem; border-radius: 8px; font-weight: 600 !important; transition: background 0.2s !important; }
+    .nav-cta:hover { background: var(--accent-light) !important; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; background: var(--gradient);
+      display: flex; align-items: center; padding: 120px 5% 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 70%);
+      top: -150px; right: -150px; pointer-events: none;
+    }
+    .hero-inner { max-width: 860px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(37,99,235,0.2); border: 1px solid rgba(37,99,235,0.4);
+      color: #93c5fd; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 999px; margin-bottom: 1.75rem;
+    }
+    .hero-badge::before { content: ''; width: 6px; height: 6px; background: #60a5fa; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:0.5;transform:scale(1.4);} }
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      font-weight: 700; line-height: 1.1; color: var(--white);
+      letter-spacing: -1.5px; margin-bottom: 1.5rem;
+    }
+    .hero h1 em { color: #60a5fa; font-style: normal; }
+    .hero-sub { font-size: 1.15rem; color: rgba(255,255,255,0.65); max-width: 620px; margin-bottom: 2.5rem; line-height: 1.75; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+    .btn-primary {
+      background: var(--accent); color: var(--white);
+      padding: 0.9rem 2rem; border-radius: 10px; font-weight: 600; font-size: 0.95rem;
+      text-decoration: none; box-shadow: 0 4px 24px rgba(37,99,235,0.45);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); }
+    .btn-ghost {
+      background: transparent; color: rgba(255,255,255,0.85);
+      padding: 0.9rem 2rem; border-radius: 10px; font-weight: 600; font-size: 0.95rem;
+      text-decoration: none; border: 1px solid rgba(255,255,255,0.25);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); }
+    .hero-trust { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .hero-trust-label { font-size: 0.78rem; color: rgba(255,255,255,0.4); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .hero-trust-logos { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
+    .hero-trust-logo { font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; font-weight: 700; color: rgba(255,255,255,0.35); letter-spacing: -0.2px; }
+
+    /* SECTIONS */
+    section { padding: 100px 5%; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .section-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 700; letter-spacing: -1px; line-height: 1.15; margin-bottom: 1.25rem; }
+    .section-subtitle { font-size: 1.05rem; color: var(--gray-600); max-width: 580px; line-height: 1.75; }
+
+    /* PROBLEM */
+    #problem { background: var(--gray-50); }
+    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .problem-bullets { list-style: none; display: flex; flex-direction: column; gap: 1rem; margin: 2rem 0; }
+    .problem-bullets li { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem; color: var(--gray-700); line-height: 1.6; }
+    .problem-bullets li::before { content: '→'; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .problem-callout {
+      background: var(--gradient); border-radius: 16px; padding: 2rem 2.5rem;
+      position: relative; overflow: hidden;
+    }
+    .problem-callout::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(37,99,235,0.3), transparent 60%); }
+    .problem-callout-text { position: relative; z-index: 1; font-size: 1.15rem; color: rgba(255,255,255,0.9); line-height: 1.7; font-weight: 400; }
+    .problem-callout-text strong { color: white; font-weight: 700; }
+
+    /* METHOD */
+    #method { background: var(--white); }
+    .method-header { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; margin-bottom: 3rem; }
+    .method-stages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2.5rem; }
+    .method-stage {
+      background: var(--gray-50); border: 1px solid var(--gray-200);
+      border-radius: 14px; padding: 1.75rem;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .method-stage:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,0,0,0.07); border-color: var(--accent); }
+    .stage-num { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+    .stage-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--black); margin-bottom: 0.4rem; }
+    .stage-desc { font-size: 0.83rem; color: var(--gray-600); line-height: 1.6; }
+    .stage-outcome { display: inline-block; margin-top: 0.75rem; font-size: 0.75rem; font-weight: 600; color: var(--accent); background: var(--accent-faint); padding: 0.2rem 0.6rem; border-radius: 999px; }
+
+    /* ENGAGEMENTS */
+    #engagements { background: var(--gray-50); }
+    .engage-header { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; margin-bottom: 3rem; }
+    .engage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .engage-card {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: 16px; padding: 2rem; position: relative; overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+    .engage-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); opacity: 0; transition: opacity 0.25s; }
+    .engage-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.08); }
+    .engage-card:hover::before { opacity: 1; }
+    .engage-card.featured { border-color: var(--accent); }
+    .engage-card.featured::before { opacity: 1; }
+    .engage-badge { display: inline-block; background: var(--accent-faint); color: var(--accent); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 999px; margin-bottom: 1rem; }
+    .engage-icon { width: 48px; height: 48px; background: var(--accent-faint); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-size: 1.4rem; }
+    .engage-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .engage-duration { font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 0.75rem; }
+    .engage-desc { font-size: 0.875rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 1.25rem; }
+    .engage-deliverables { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .engage-deliverables li { font-size: 0.82rem; color: var(--gray-600); display: flex; align-items: flex-start; gap: 0.5rem; }
+    .engage-deliverables li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .engage-note { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--gray-100); font-size: 0.78rem; color: var(--gray-400); font-weight: 500; }
+
+    /* TESTIMONIALS */
+    #testimonials { background: var(--white); }
+    .testi-intro { text-align: center; max-width: 540px; margin: 0 auto 3rem; }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .testi-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; }
+    .stars { color: #f59e0b; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 1rem; }
+    .testi-text { font-size: 0.95rem; color: var(--gray-800); line-height: 1.75; flex: 1; margin-bottom: 1.5rem; }
+    .testi-author { display: flex; align-items: center; gap: 0.75rem; }
+    .testi-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #8b5cf6); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .testi-name { font-weight: 600; font-size: 0.9rem; color: var(--black); }
+    .testi-role { font-size: 0.78rem; color: var(--gray-400); margin-top: 1px; }
+
+    /* ABOUT */
+    #about { background: var(--gray-50); }
+    .about-grid { display: grid; grid-template-columns: 1fr 400px; gap: 5rem; align-items: center; }
+    .about-text p { font-size: 1rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 1.25rem; }
+    .about-links { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.75rem; }
+    .about-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--white); border: 1.5px solid var(--gray-200);
+      color: var(--gray-800); font-size: 0.85rem; font-weight: 600;
+      padding: 0.55rem 1.1rem; border-radius: 8px; text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .about-link:hover { border-color: var(--accent); color: var(--accent); }
+    .about-link.primary { background: var(--accent); border-color: transparent; color: white; }
+    .about-link.primary:hover { background: var(--accent-light); color: white; }
+    .about-card {
+      background: var(--gradient); border-radius: 20px; padding: 2.5rem;
+      color: white; position: relative; overflow: hidden;
+    }
+    .about-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(37,99,235,0.3), transparent 60%); }
+    .about-card-inner { position: relative; z-index: 1; }
+    .about-avatar {
+      width: 80px; height: 80px; border-radius: 50%; overflow: hidden;
+      border: 3px solid rgba(255,255,255,0.2); margin-bottom: 1.25rem;
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; color: white;
+    }
+    .about-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .about-card-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.2rem; color: white; margin-bottom: 0.2rem; }
+    .about-card-role { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
+    .about-stat { display: flex; justify-content: space-between; align-items: center; padding: 0.875rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .about-stat:last-of-type { border-bottom: none; }
+    .stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.55); }
+    .stat-val { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.95rem; color: #60a5fa; }
+
+    /* NEWSLETTER */
+    #newsletter { background: var(--white); }
+    .newsletter-inner {
+      max-width: 680px; margin: 0 auto; text-align: center;
+      background: var(--gray-50); border: 1px solid var(--gray-200);
+      border-radius: 20px; padding: 3rem;
+    }
+    .newsletter-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .newsletter-inner .section-label { display: block; }
+    .newsletter-inner .section-title { font-size: 1.8rem; margin-bottom: 0.75rem; }
+    .newsletter-inner p { font-size: 0.95rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 2rem; max-width: 460px; margin-left: auto; margin-right: auto; }
+    .newsletter-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: #ff6719; color: white; font-weight: 700; font-size: 0.95rem;
+      padding: 0.875rem 2rem; border-radius: 10px; text-decoration: none;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .newsletter-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    /* FAQ */
+    #faq { background: var(--gray-50); }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 3rem; }
+    .faq-item { background: var(--white); border: 1px solid var(--gray-200); border-radius: 14px; padding: 1.75rem; }
+    .faq-q { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--black); margin-bottom: 0.6rem; }
+    .faq-a { font-size: 0.875rem; color: var(--gray-600); line-height: 1.7; }
+
+    /* CTA */
+    #cta { background: var(--gradient); padding: 100px 5%; }
+    .cta-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+    .cta-inner .section-label { color: #93c5fd; }
+    .cta-inner .section-title { color: white; }
+    .cta-inner p { color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; font-size: 1.05rem; line-height: 1.75; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-detail { display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.4); flex-wrap: wrap; }
+    .cta-dot { width: 4px; height: 4px; background: rgba(255,255,255,0.3); border-radius: 50%; }
+
+    /* FOOTER */
+    footer { background: #0a0a0a; padding: 4rem 5% 2.5rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .footer-brand-desc { font-size: 0.85rem; color: rgba(255,255,255,0.35); line-height: 1.7; margin-top: 0.75rem; max-width: 280px; }
+    .footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+    .footer-logo span { color: var(--accent-light); }
+    .footer-col-title { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 1.25rem; }
+    .footer-col-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col-links a { font-size: 0.85rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-col-links a:hover { color: white; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 2rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.2); }
+    .footer-social { display: flex; gap: 1rem; }
+    .footer-social a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+    .footer-social a:hover { color: white; }
+
+    /* RESPONSIVE */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger-bar { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .hamburger.open .hamburger-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open .hamburger-bar:nth-child(2) { opacity: 0; }
+    .hamburger.open .hamburger-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 900px) {
+      .problem-grid, .about-grid, .method-header, .engage-header { grid-template-columns: 1fr; gap: 2.5rem; }
+      .method-stages, .engage-grid, .testi-grid, .faq-grid { grid-template-columns: 1fr 1fr; }
+      section { padding: 72px 5%; }
+      #cta { padding: 72px 5%; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 600px) {
+      .hamburger { display: flex; }
+      .nav-logo { font-size: 1.3rem; }
+      .nav-links {
+        display: none; position: fixed; top: 68px; left: 0; right: 0;
+        background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
+        flex-direction: column; gap: 0; padding: 0.5rem 0 1.25rem;
+        border-bottom: 1px solid var(--gray-200); box-shadow: 0 8px 32px rgba(0,0,0,0.1); z-index: 99;
+      }
+      .nav-links.mobile-open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 0.875rem 5%; font-size: 0.95rem; border-bottom: 1px solid var(--gray-100); color: var(--gray-800) !important; }
+      .nav-cta { margin: 0.75rem 5% 0 !important; display: block; text-align: center; border-bottom: none !important; }
+      section { padding: 52px 5%; }
+      #cta { padding: 52px 5%; }
+      .hero { padding: 90px 5% 52px; min-height: auto; }
+      .hero h1 { font-size: 2.1rem; }
+      .hero-actions { flex-direction: column; }
+      .method-stages, .engage-grid, .testi-grid, .faq-grid { grid-template-columns: 1fr; }
+      .cta-actions { flex-direction: column; align-items: center; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">Rvelate<span>™</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Open navigation">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#problem">The Problem</a></li>
+      <li><a href="#method">6E Method™</a></li>
+      <li><a href="#engagements">Engagements</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="https://rvelate.scoreapp.com" target="_blank" class="nav-diagnostic">Free Diagnostic</a></li>
+      <li><a href="https://cal.com/rvelate/clarity-call-30" target="_blank" class="nav-cta">Book a Call</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-badge">Fractional CTO · US · UK · UAE · Canada</div>
+      <h1>Your technology business is scaling.<br /><em>Your architecture isn't keeping pace.</em></h1>
+      <p class="hero-sub">
+        Rvelate helps technology-led organisations replace scaling chaos with structural clarity, predictable delivery, and board-ready governance — through the proprietary 6E Method™.
+      </p>
+      <div class="hero-actions">
+        <a href="https://cal.com/rvelate/clarity-call-30" target="_blank" class="btn-primary">Book a Free Clarity Call</a>
+        <a href="https://rvelate.scoreapp.com" target="_blank" class="btn-ghost">Take the 6E Diagnostic →</a>
+      </div>
+      <div class="hero-trust">
+        <span class="hero-trust-label">25 years inside</span>
+        <div class="hero-trust-logos">
+          <span class="hero-trust-logo">JPMorgan</span>
+          <span class="hero-trust-logo">Mastercard</span>
+          <span class="hero-trust-logo">HSBC</span>
+          <span class="hero-trust-logo">Nokia</span>
+          <span class="hero-trust-logo">Vodafone</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="section-inner">
+      <div class="problem-grid">
+        <div>
+          <div class="section-label">The Problem</div>
+          <h2 class="section-title">Effort stops being the answer at a certain scale.</h2>
+          <p style="font-size:1rem;color:var(--gray-600);line-height:1.8;margin-bottom:1.5rem;">You have the capital. You have the customers. But your architecture, delivery, and governance haven't kept pace — and your board is starting to notice.</p>
+          <ul class="problem-bullets">
+            <li>Multiple teams, colliding priorities, decisions bouncing back to you</li>
+            <li>Unpredictable delivery and recurring board-level concerns</li>
+            <li>Technical debt compounding faster than it's addressed</li>
+            <li>Your best people stretched; leadership bandwidth burning on escalations</li>
+            <li>Governance exists on paper but not in practice</li>
+          </ul>
+        </div>
+        <div class="problem-callout">
+          <p class="problem-callout-text">
+            "This is the moment where <strong>effort stops being the answer.</strong> What you need now is structure — across your architecture, your operating model, and your leadership layer."
+          </p>
+          <div style="margin-top:1.5rem;font-size:0.82rem;color:rgba(255,255,255,0.4);font-weight:500;">Chidi Oparah · Founder, Rvelate™</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6E METHOD -->
+  <section id="method">
+    <div class="section-inner">
+      <div class="method-header">
+        <div>
+          <div class="section-label">The 6E Method™</div>
+          <h2 class="section-title">From Scaling Chaos to Self-Correcting Execution</h2>
+        </div>
+        <p class="section-subtitle">A proprietary six-stage framework developed across 25+ years. Takes organisations from structural chaos to predictable, scalable delivery.</p>
+      </div>
+      <div class="method-stages">
+        <div class="method-stage">
+          <div class="stage-num">Stage 01</div>
+          <div class="stage-name">Evaluate</div>
+          <p class="stage-desc">Understand how your business actually runs today. Rapid structural diagnosis across architecture, teams, and delivery flows.</p>
+          <span class="stage-outcome">Diagnostic baseline</span>
+        </div>
+        <div class="method-stage">
+          <div class="stage-num">Stage 02</div>
+          <div class="stage-name">Envision</div>
+          <p class="stage-desc">Translate your ambition into a practical picture of the future operating model. 12-24 month shared direction.</p>
+          <span class="stage-outcome">Shared target state</span>
+        </div>
+        <div class="method-stage">
+          <div class="stage-num">Stage 03</div>
+          <div class="stage-name">Empower</div>
+          <p class="stage-desc">Create shared ownership. Remove the decision dependency through clear governance and decision rights.</p>
+          <span class="stage-outcome">Independent execution</span>
+        </div>
+        <div class="method-stage">
+          <div class="stage-num">Stage 04</div>
+          <div class="stage-name">Equip</div>
+          <p class="stage-desc">Build the structures, standards, and rhythms that allow teams to deliver consistently rather than firefighting.</p>
+          <span class="stage-outcome">Predictable delivery</span>
+        </div>
+        <div class="method-stage">
+          <div class="stage-num">Stage 05</div>
+          <div class="stage-name">Enable</div>
+          <p class="stage-desc">Embed the capability and ownership mindset so progress continues without external oversight.</p>
+          <span class="stage-outcome">Self-correcting teams</span>
+        </div>
+        <div class="method-stage">
+          <div class="stage-num">Stage 06</div>
+          <div class="stage-name">Evolve</div>
+          <p class="stage-desc">Maintain momentum as you grow. Keep architecture, roadmap, and operating model aligned.</p>
+          <span class="stage-outcome">Sustained execution</span>
+        </div>
+      </div>
+      <div style="text-align:center;">
+        <a href="https://rvelate.scoreapp.com" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent);color:white;font-weight:600;font-size:0.9rem;padding:0.8rem 1.75rem;border-radius:10px;text-decoration:none;box-shadow:0 4px 20px rgba(37,99,235,0.35);">Find your biggest bottleneck — Take the free 6E Diagnostic →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGAGEMENTS -->
+  <section id="engagements">
+    <div class="section-inner">
+      <div class="engage-header">
+        <div>
+          <div class="section-label">How It Works</div>
+          <h2 class="section-title">Three stages. One direction. No ambiguity.</h2>
+        </div>
+        <p class="section-subtitle">All engagements are fixed-fee and anchored to outcomes. No day rates. No reports from the outside. Chidi works embedded inside your organisation.</p>
+      </div>
+      <div class="engage-grid">
+        <div class="engage-card">
+          <div class="engage-icon">🔍</div>
+          <div class="engage-badge">Start Here</div>
+          <div class="engage-title">2-Week Clarity Audit</div>
+          <div class="engage-duration">2 weeks · Fixed fee</div>
+          <p class="engage-desc">Rapid diagnostic mapping value flows across systems, teams, and critical operations. Surface root causes, not symptoms.</p>
+          <ul class="engage-deliverables">
+            <li>Clarity Map</li>
+            <li>Architecture &amp; Risk Snapshot</li>
+            <li>Operating Model Scan</li>
+            <li>Executive Findings Brief</li>
+          </ul>
+          <div class="engage-note">Maps to: E1 + E2</div>
+        </div>
+        <div class="engage-card featured">
+          <div class="engage-icon">🚀</div>
+          <div class="engage-badge">Most Popular</div>
+          <div class="engage-title">90-Day Transformation Sprint</div>
+          <div class="engage-duration">90 days · Fixed fee</div>
+          <p class="engage-desc">Converts findings into an executable plan. Embedded leadership, governance design, and sustainable delivery rhythm.</p>
+          <ul class="engage-deliverables">
+            <li>Transformation Roadmap</li>
+            <li>Target Architecture</li>
+            <li>Governance Blueprint</li>
+            <li>Board-Ready Narrative</li>
+          </ul>
+          <div class="engage-note">Maps to: E3 + E4 + E5</div>
+        </div>
+        <div class="engage-card">
+          <div class="engage-icon">🤝</div>
+          <div class="engage-badge">Ongoing</div>
+          <div class="engage-title">Fractional CTO Retainer</div>
+          <div class="engage-duration">3–12 months · Fixed fee</div>
+          <p class="engage-desc">Senior technology partner embedded during scaling. Architecture oversight, risk partnership, and board liaison.</p>
+          <ul class="engage-deliverables">
+            <li>Architecture Oversight</li>
+            <li>Forum Participation</li>
+            <li>Quarterly Roadmap Refresh</li>
+            <li>Board-Ready Narrative</li>
+          </ul>
+          <div class="engage-note">Maps to: E6 ongoing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="section-inner">
+      <div class="testi-intro">
+        <div class="section-label">Testimonials</div>
+        <h2 class="section-title">What leaders say</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"Chidi walked in and within two weeks had completely reframed how we thought about our architecture. He gave our leadership team a single, shared picture of where we were and exactly where we needed to go."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">SK</div>
+            <div>
+              <div class="testi-name">Sarah K.</div>
+              <div class="testi-role">CTO, SaaS Scale-up</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"We needed someone who could speak to our board, align engineering and product, and still get into the detail when needed. Chidi brought structural clarity we hadn't had in years."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">MO</div>
+            <div>
+              <div class="testi-name">Marcus O.</div>
+              <div class="testi-role">CEO, Fintech Scale-up</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"The escalations stopped. Decisions started getting made at the right level. Our delivery cadence went from unpredictable to consistent, all within the 90-day sprint. Exceptional."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">AT</div>
+            <div>
+              <div class="testi-name">Amara T.</div>
+              <div class="testi-role">Founder, PE-Backed Tech Business</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div>
+          <div class="section-label">Who You're Working With</div>
+          <h2 class="section-title">Enterprise depth. Startup speed.</h2>
+          <p class="about-text">Chidi Oparah is a Fractional CTO, Enterprise Architect, SAFe SPC, and Transformation Coach with 25+ years inside JPMorgan, Mastercard/Vocalink, HSBC, Nokia, and Vodafone.</p>
+          <p class="about-text">He works embedded inside organisations — steering forums, architecture reviews, leadership sessions — never detached. All engagements are fixed-fee and anchored to outcomes.</p>
+          <div class="about-links">
+            <a href="https://cal.com/rvelate/clarity-call-30" target="_blank" class="about-link primary">Book a Clarity Call</a>
+            <a href="https://chidioparah.com" target="_blank" class="about-link">Full Profile →</a>
+            <a href="https://linkedin.com/in/chidioparah" target="_blank" class="about-link">LinkedIn</a>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-inner">
+            <div class="about-avatar">CO</div>
+            <div class="about-card-name">Chidi Oparah</div>
+            <div class="about-card-role">Founder · Fractional CTO · Rvelate™</div>
+            <div class="about-stat">
+              <span class="stat-label">Experience</span>
+              <span class="stat-val">25+ years</span>
+            </div>
+            <div class="about-stat">
+              <span class="stat-label">Typical team size</span>
+              <span class="stat-val">60–120 engineers</span>
+            </div>
+            <div class="about-stat">
+              <span class="stat-label">Markets</span>
+              <span class="stat-val">US · UK · UAE · Canada</span>
+            </div>
+            <div class="about-stat">
+              <span class="stat-label">Pricing</span>
+              <span class="stat-val">Fixed-fee only</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter">
+    <div class="section-inner">
+      <div class="newsletter-inner">
+        <div class="newsletter-icon">✍️</div>
+        <span class="section-label">Substack</span>
+        <h2 class="section-title" style="font-size:1.7rem;">Thinking on technology leadership</h2>
+        <p>Chidi writes about scaling technology organisations, enterprise architecture, and what it really takes to move from chaos to clarity. No fluff.</p>
+        <a href="https://substack.com/@chidioparah" target="_blank" class="newsletter-btn">Read on Substack →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-inner">
+      <div style="max-width:540px;margin-bottom:0;">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Common questions</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-q">Do you work with early-stage startups?</div>
+          <p class="faq-a">Rvelate is built for organisations with 60–120 engineers that are scaling fast and under board or investor pressure. Earlier stage companies are typically better served by a part-time technical advisor.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What does "fixed-fee" mean in practice?</div>
+          <p class="faq-a">You agree a scope and a price upfront. No day rates, no time-billing, no surprise invoices. The fee is anchored to outcomes, not hours.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How quickly can an engagement start?</div>
+          <p class="faq-a">A Clarity Audit can typically begin within two weeks of agreement. Chidi takes on a limited number of engagements at any one time to ensure full focus.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What sectors do you work in?</div>
+          <p class="faq-a">Technology-led organisations across fintech, SaaS, payments, healthcare technology, and regulated scale-ups. Primarily US, UK, UAE, and Canada.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How is Rvelate™ different from a consulting firm?</div>
+          <p class="faq-a">Chidi works embedded inside your organisation — not as an external reporter. He sits in steering forums, architecture reviews, and leadership sessions. One person, full accountability.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What's the best way to get started?</div>
+          <p class="faq-a">Take the free 6E Diagnostic to identify your biggest bottleneck, then book a 30-minute Clarity Call. No commitment required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="cta-inner">
+      <div class="section-label">Get Started</div>
+      <h2 class="section-title" style="color:white;">Recognised your organisation?</h2>
+      <p>If your architecture, delivery, and governance aren't keeping pace with growth, let's talk. Start with the free diagnostic or book a 30-minute Clarity Call with Chidi directly.</p>
+      <div class="cta-actions">
+        <a href="https://cal.com/rvelate/clarity-call-30" target="_blank" class="btn-primary">Book a Clarity Call</a>
+        <a href="https://rvelate.scoreapp.com" target="_blank" class="btn-ghost">Take the Free Diagnostic →</a>
+      </div>
+      <div class="cta-detail">
+        <span>Fixed-fee only</span><span class="cta-dot"></span>
+        <span>Embedded, not detached</span><span class="cta-dot"></span>
+        <span>US · UK · UAE · Canada</span><span class="cta-dot"></span>
+        <span>Chidi@rvelate.com</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <a href="#" class="footer-logo">Rvelate<span>™</span></a>
+          <p class="footer-brand-desc">Structural clarity for scaling technology organisations. Fractional CTO services through the 6E Method™.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-col-links">
+            <li><a href="#engagements">Clarity Audit</a></li>
+            <li><a href="#engagements">Transformation Sprint</a></li>
+            <li><a href="#engagements">Fractional CTO</a></li>
+            <li><a href="https://rvelate.scoreapp.com" target="_blank">Free Diagnostic</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-col-links">
+            <li><a href="#method">The 6E Method™</a></li>
+            <li><a href="#about">About Chidi</a></li>
+            <li><a href="https://chidioparah.com" target="_blank">Personal Profile</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-col-links">
+            <li><a href="https://cal.com/rvelate/clarity-call-30" target="_blank">Book a Call</a></li>
+            <li><a href="mailto:Chidi@rvelate.com">Chidi@rvelate.com</a></li>
+            <li><a href="https://linkedin.com/in/chidioparah" target="_blank">LinkedIn</a></li>
+            <li><a href="https://substack.com/@chidioparah" target="_blank">Substack</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 Rvelate™. All rights reserved.</div>
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/chidioparah" target="_blank">LinkedIn</a>
+          <a href="https://substack.com/@chidioparah" target="_blank">Substack</a>
+          <a href="mailto:Chidi@rvelate.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('mobile-open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('mobile-open');
+    }));
+  </script>
+</body>
+</html>

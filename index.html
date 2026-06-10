@@ -17,6 +17,9 @@
   <meta name="twitter:title" content="Chidi Oparah | Fractional CTO" />
   <meta name="twitter:description" content="Fractional CTO Chidi Oparah brings 25+ years inside JPMorgan, Mastercard, HSBC &amp; Vodafone. Replace scaling chaos with structural clarity. 6E Method™. US · UK · UAE." />
   <meta name="twitter:image" content="https://chidioparah.com/chidi-photo.jpg" />
+  <meta name="author" content="Chidi Oparah" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="fractional CTO, Chidi Oparah, Rvelate, 6E Method, enterprise architecture, technology strategy, TOGAF, SAFe, digital transformation, scaling technology, board governance, UK, US, UAE" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -986,6 +989,23 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://chidioparah.com/#website",
+        "url": "https://chidioparah.com",
+        "name": "Chidi Oparah",
+        "description": "Fractional CTO services helping technology-led organisations replace scaling chaos with structural clarity through the 6E Method™.",
+        "publisher": {"@id": "https://chidioparah.com/#chidi"}
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://chidioparah.com/#webpage",
+        "url": "https://chidioparah.com/",
+        "name": "Chidi Oparah | Fractional CTO",
+        "isPartOf": {"@id": "https://chidioparah.com/#website"},
+        "about": {"@id": "https://chidioparah.com/#chidi"},
+        "description": "Fractional CTO Chidi Oparah brings 25+ years inside JPMorgan, Mastercard, HSBC & Vodafone. Replace scaling chaos with structural clarity and board-ready governance. 6E Method™."
+      },
+      {
         "@type": "Person",
         "@id": "https://chidioparah.com/#chidi",
         "name": "Chidi Oparah",
@@ -994,9 +1014,12 @@
         "url": "https://chidioparah.com",
         "image": "https://chidioparah.com/chidi-photo.jpg",
         "email": "Chidi@rvelate.com",
-        "knowsAbout": ["Enterprise Architecture", "Technology Strategy", "SAFe", "TOGAF", "AWS", "Operating Model Design", "Governance Design", "Fractional CTO"],
+        "knowsAbout": ["Enterprise Architecture", "Technology Strategy", "SAFe", "TOGAF", "AWS", "Operating Model Design", "Governance Design", "Fractional CTO", "Digital Transformation", "Agile Transformation"],
         "worksFor": {"@id": "https://chidioparah.com/#rvelate"},
-        "sameAs": ["https://www.linkedin.com/in/chidioparah"]
+        "sameAs": [
+          "https://www.linkedin.com/in/chidioparah",
+          "https://substack.com/@chidioparah"
+        ]
       },
       {
         "@type": "ProfessionalService",
@@ -1007,7 +1030,64 @@
         "description": "Fractional CTO services helping technology-led organisations replace scaling chaos with structural clarity and board-ready governance through the proprietary 6E Method™.",
         "areaServed": ["United States", "United Kingdom", "United Arab Emirates"],
         "serviceType": "Fractional CTO Advisory",
-        "priceRange": "Fixed-fee"
+        "priceRange": "Fixed-fee",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "3",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {"@type": "Person", "name": "Sarah K."},
+            "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+            "reviewBody": "Chidi walked in and within two weeks had completely reframed how we thought about our architecture. He gave our leadership team a single, shared picture of where we were and exactly where we needed to go."
+          },
+          {
+            "@type": "Review",
+            "author": {"@type": "Person", "name": "Marcus O."},
+            "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+            "reviewBody": "We needed someone who could speak to our board, align engineering and product, and still get into the detail when needed. Chidi is that rare person, and he brought structural clarity we hadn't had in years."
+          },
+          {
+            "@type": "Review",
+            "author": {"@type": "Person", "name": "Amara T."},
+            "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+            "reviewBody": "The escalations stopped. Decisions started getting made at the right level. Our delivery cadence went from unpredictable to consistent, all within the 90-day sprint. Exceptional work."
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Fractional CTO Engagement Tiers",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "2-Week Clarity Audit",
+                "description": "Complete structural diagnosis mapping value flows across systems, teams, and critical operations. Surface root causes fast."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "90-Day Transformation Sprint",
+                "description": "Converts findings into an executable plan with embedded leadership, governance design, and a sustainable delivery rhythm."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Fractional CTO Partnership",
+                "description": "Ongoing architecture oversight, strategic partnership, and risk recalibration as your senior partner in the room, including board and investor liaison."
+              }
+            }
+          ]
+        }
       }
     ]
   }

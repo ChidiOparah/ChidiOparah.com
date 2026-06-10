@@ -17,6 +17,9 @@
   <meta name="twitter:title" content="Chidi Oparah | Fractional CTO &amp; Enterprise Architect" />
   <meta name="twitter:description" content="Chidi Oparah, Fractional CTO, Enterprise Architect, SAFe SPC. 25+ years at JPMorgan, Mastercard, HSBC, Nokia &amp; Vodafone. Creator of the 6E Method™." />
   <meta name="twitter:image" content="https://chidioparah.com/chidi-photo.jpg" />
+  <meta name="author" content="Chidi Oparah" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Chidi Oparah, fractional CTO, enterprise architect, SAFe SPC, TOGAF 9, AWS certified, technology transformation, 6E Method, Rvelate, JPMorgan, Mastercard, HSBC, Nokia, Vodafone" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -677,6 +680,80 @@
     document.getElementById('closeModal').addEventListener('click', () => modal.classList.remove('open'));
     modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": "https://chidioparah.com/chidi-oparah.html#webpage",
+        "url": "https://chidioparah.com/chidi-oparah.html",
+        "name": "Chidi Oparah | Profile | Fractional CTO & Enterprise Architect",
+        "description": "Chidi Oparah, Fractional CTO, Enterprise Architect, SAFe SPC. 25+ years at JPMorgan, Mastercard, HSBC, Nokia & Vodafone. Creator of the 6E Method™.",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://chidioparah.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Profile", "item": "https://chidioparah.com/chidi-oparah.html"}
+          ]
+        },
+        "mainEntity": {"@id": "https://chidioparah.com/#chidi"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://chidioparah.com/#chidi",
+        "name": "Chidi Oparah",
+        "jobTitle": "Fractional CTO",
+        "description": "Fractional CTO, Enterprise Architect, SAFe SPC and Transformation Coach with 25+ years inside JPMorgan, Mastercard, HSBC, Nokia and Vodafone. Founder of Rvelate™ and creator of the 6E Method™.",
+        "url": "https://chidioparah.com",
+        "image": "https://chidioparah.com/chidi-photo.jpg",
+        "email": "Chidi@rvelate.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "London",
+          "addressCountry": "GB"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "@id": "https://chidioparah.com/#rvelate",
+          "name": "Rvelate™",
+          "url": "https://chidioparah.com"
+        },
+        "knowsAbout": ["Enterprise Architecture", "Technology Strategy", "SAFe", "TOGAF", "AWS", "Operating Model Design", "Governance Design", "Fractional CTO", "Digital Transformation", "Agile Transformation"],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "SAFe Program Consultant (SPC)",
+            "recognizedBy": {"@type": "Organization", "name": "Scaled Agile, Inc."}
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "TOGAF 9 Certified",
+            "recognizedBy": {"@type": "Organization", "name": "The Open Group"}
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "AWS Certified Developer",
+            "recognizedBy": {"@type": "Organization", "name": "Amazon Web Services"}
+          }
+        ],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Westminster",
+          "description": "BSc Architectural Engineering"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/chidioparah",
+          "https://substack.com/@chidioparah"
+        ]
+      }
+    ]
+  }
   </script>
 </body>
 </html>
