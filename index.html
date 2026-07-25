@@ -378,11 +378,11 @@
     /* 6E METHOD */
     #method { background: var(--white); }
     .method-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; margin-bottom: 2.5rem; }
-    .method-stages-simple { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .method-stages-simple { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
     .method-stage {
-      display: flex; align-items: center; gap: 0.5rem;
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
       background: var(--gray-50); border: 1px solid var(--gray-200);
-      border-radius: 10px; padding: 0.875rem 1.25rem;
+      border-radius: 10px; padding: 1rem 1.25rem;
       font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--black);
       transition: border-color 0.2s, background 0.2s, color 0.2s;
     }
@@ -488,6 +488,7 @@
       .about-grid { grid-template-columns: 1fr; }
       .services-header, .method-intro { grid-template-columns: 1fr; }
       .services-grid { grid-template-columns: 1fr 1fr; }
+      .method-stages-simple { grid-template-columns: repeat(3, 1fr); }
       .why-grid { grid-template-columns: 1fr; }
       .testi-grid { grid-template-columns: 1fr; }
       section { padding: 72px 5%; }
@@ -526,6 +527,7 @@
       .btn-primary, .btn-ghost { text-align: center; padding: 0.875rem 1.5rem; }
       /* Grids */
       .services-grid { grid-template-columns: 1fr; }
+      .method-stages-simple { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
       /* Logos */
       .logos-strip { padding: 1.75rem 5%; }
       .logos-row { gap: 0.6rem; }
