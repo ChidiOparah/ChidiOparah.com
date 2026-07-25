@@ -1,4 +1,28 @@
-User-agent: *
+# Google only. All other crawlers are disallowed by the default rule below.
+User-agent: Googlebot
 Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Link-preview bots, needed so shared links render a card on LinkedIn,
+# Twitter/X, and Slack. Not general-purpose crawlers.
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+# Default: everything else, including AI training crawlers (GPTBot,
+# CCBot, ClaudeBot, Bytespider, PerplexityBot) and SEO/scraper bots
+# (AhrefsBot, SemrushBot, MJ12bot), is disallowed.
+User-agent: *
+Disallow: /
 
 Sitemap: https://chidioparah.com/sitemap.xml
